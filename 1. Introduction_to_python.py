@@ -39,3 +39,41 @@ for i, t in enumerate(temps, start=1):
 
 print(f"Yearly Avg Temp: {a:.2f}°C")
 
+# Take a three-digit number and find the reverse of the number.
+number = input("Enter a three-digit number: ")
+
+if len(number) == 3 and number.isdigit():
+    reversed_number = int(number[::-1])
+    print("Reverse of the number:", reversed_number)
+else:
+    print("Please enter a valid three-digit number.")
+
+# Take the customer's first name and last name and print them as last name first followed by the first name.
+first_name = input("What is your first name: ")
+last_name = input("What is your last name: ")
+print(f"{last_name} {first_name}")
+
+#Get the principal amount, interest, and year and find the simple interest and compound interest.
+# Get the principal amount, interest, and year and find the simple interest and compound interest.
+def calculate_si(p, r, t):
+    si = (p * r * t) / 100
+    return si
+
+def calculate_ci(p, r, t):
+    n = 1
+    a = p * (1 + (r / (100 * n))**(n * t))
+    ci = a - p
+    return ci
+
+p = float(input("Enter the principal amount: "))
+r = float(input("Enter the interest rate (in %): "))
+t = float(input("Enter the time period (in years): "))
+
+si = calculate_si(p, r, t)
+ci = calculate_ci(p, r, t)
+
+print(f"Principal: ${p}")
+print(f"Rate: {r}%")
+print(f"Time: {t} years")
+print(f"SI: ${si}")
+print(f"CI: ${ci}")
