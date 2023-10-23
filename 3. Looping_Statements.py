@@ -274,4 +274,14 @@ res = createArray(r, c)
 for row in res:
     print(row)
 
+# 30. Create a script in Python that determines if the given number is a palindrome. Given numbers: 
+# [i]7890987
+# [ii] 324576
+
+lst = [324576, 7890987]
+for i in lst:
+    if str(i) == str(i)[::-1]:
+        print (f"{i} is palindrome")
+    else:
+        print(f"{i} is not palindrome")
 
