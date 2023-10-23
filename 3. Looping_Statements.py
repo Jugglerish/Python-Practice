@@ -103,6 +103,79 @@ for i in range(2, n):
 for num in f:
     print(num)
 # 11. Write a program using the for loop that outputs each word in the list. rice= ["Arborio", "Wehani", "Basmati" ] Also, print each word's characters instead. str="Hakuna Matata"
+r = ["Arborio", "Wehani", "Basmati"]
 
+for w in r:
+    print(w)
+    for c in w:
+        print(c)
+        
+s = "Hakuna Matata"
 
+for w in s.split():
+    print(w)
+    for c in w:
+        print(c)
+#Create a program utilizing a for loop, an if statement, and break in Python to post a list of rice and verify their presence or absence. rice=["Arborio", "Wehani", "Basmati" ]
+r = ["Arborio", "Wehani", "Basmati"]
+r_t = ["Arborio", "Jasmine", "Wild Rice"]
 
+for r_type in r_t:
+    if r_type in r:
+        print(f"{r_type} is available.")
+    else:
+        print(f"{r_type} is not available.")
+
+    if r_type == "Basmati":
+        print("Breaking the loop as Basmati was checked.")
+        break
+
+# 13. Convert the following "while loop" into a "for loop": x=804 while(x<=1008):print(x *100)  x+=15
+for x in range(804, 1009, 15):
+    print(x * 100)
+
+# 14. Create some code to generate the following pattern using two "for loops".
+# 666666
+# 55555
+# 4444
+# 333
+# 22
+# 1
+for i in range(6, 0, -1):
+    for k in range(i):
+        print(i, end = "")
+    print()
+
+# 14. Create some code to generate the following pattern using two "for loops".
+# 1
+# 22
+# 333
+# 4444
+# 55555
+# 666666
+for i in range(1, 7):
+    for k in range(i):
+        print(i, end = "")
+    print()
+
+# 16. Write a program using a while loop to calculate the mean(= total/25) of a set of numbers using a while loop. Given while loop condition = count<6
+c = 0
+t = 0
+
+while c < 6:
+    n = float(input("Enter a number: "))
+    t += n
+    c += 1
+
+m = t / 6
+
+print(f"The mean of the numbers is: {m}")
+
+#17. Create a Python code using for loop that outputs all the multiples of 5 between 108 and 508.
+for i in range(108, 508+1):
+    if i % 5 == 0:
+        print(f"{i} is a multiple of 5")
+    else:
+        print(f"{i} is a not multiple of 5")
+
+print("We're out from loop now.")
