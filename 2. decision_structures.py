@@ -54,3 +54,30 @@ if n % 2 == 0:
 else:
     print("The number is odd.")
 
+# Write a program to calculate bonuses for employees based on grade and basic pay. (Given name, grade, basic pay, dearness allowance, HRA, CCA, conveyance, etc.)
+n = input("Enter employee's name: ")
+g = input("Enter employee's grade: ")
+bp = float(input("Enter employee's basic pay: ")
+
+da = bp * 0.10
+hra = bp * 0.15
+cca = bp * 0.05
+conveyance = 1000.0
+
+bonus = da + hra + cca + conveyance
+
+print("Employee Name:", n)
+print("Grade:", g)
+print("Basic Pay:", bp)
+print("Bonus Amount:", bonus)
+
+# Write a program to display the day's name, given the date of a specific month.
+import datetime
+
+x = input("Enter a date (YYYY-MM-DD): ")
+d = datetime.datetime.strptime(x, "%Y-%m-%d")
+w = d.weekday()
+n = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+print("The day for", x, "is", n[w])
+
+
