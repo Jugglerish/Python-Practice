@@ -179,3 +179,20 @@ for i in range(108, 508+1):
         print(f"{i} is a not multiple of 5")
 
 print("We're out from loop now.")
+
+#18. Develop a Python code using for loop, which, in response to an integer input(x) from the user, returns all the integers in line. Given range(18,25)
+a = int(input("Enter a number: "))
+
+if a > 18 and a < 25:
+    for i in range(18, 26):
+        print(i)
+else:
+    print("Number must be in range(18,25)")
+    
+#20. Write a Python code using for loop to show all the odd numbers lying between any two input numbers (1,9).
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+for i in range(num1, num2 + 1):
+    if i % 2 != 0:
+        print(i, end=",")
