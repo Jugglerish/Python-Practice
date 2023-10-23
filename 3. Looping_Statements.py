@@ -196,3 +196,82 @@ num2 = int(input("Enter the second number: "))
 for i in range(num1, num2 + 1):
     if i % 2 != 0:
         print(i, end=",")
+
+# 21. Create a Python script using for loop that will flip any user-entered word
+word = input("Enter a word: ")
+for i in word[::-1]:
+    print(i, end = "")
+
+#22. Write a Python program using a while loop that multiplies two integer numbers using repeated addition (without '*' using the operator).
+def multiply(x, y):
+    p = 0
+    while y > 0:
+        p += x
+        y -= 1
+    return p
+
+n1 = int(input("Enter first number: "))
+n2 = int(input("Enter second number: "))
+
+r = multiply(n1, n2)
+print(f"Result: {r}")
+
+#23. Write a Python program to demonstrate the use of a pass in a simple for-if loop. Given range (2786,2799). Print when multiples of 5 are found.
+for num in range(2786, 2799):
+    if num % 5 == 0:
+        print(f"{num} is a multiple of 5")
+    else:
+        pass
+
+#Create some code that uses an iterative for-else loop to cycle through the fruits strings. Given list of fruits=['Banana', 'Fig', 'Guava', 'Jackfruit, 'Lemon', 'Mango', 'Orange', 'Papaya, 'Rambutan', 'Star Apple', and 'Watermelon'].
+fruits_list = ['Banana', 'Fig', 'Guava', 'Jackfruit', 'Lemon', 'Mango', 'Orange', 'Papaya', 'Rambutan', 'Star Apple', 'Watermelon']
+search_fruit = 'Mango'
+
+for f in fruits_list:
+    if f == search_fruit:
+        print(f'{search_fruit} is found!')
+        break
+else:
+    print(f'{search_fruit} not found.')
+
+# 25. Create a code that uses an iterative for-else loop with a pass to cycle through the fruit Juice=["Amla Juice", "Orange Juice", strings. Given sequence strings are "Pomegranate Juice", and "Pineapple optional declared Juice"]. HealthiestJuice is the variable to be used in for loop.
+juice_list = ["Amla Juice", "Orange Juice", "Pomegranate Juice", "Pineapple Juice"]
+best_juice = "Pomegranate Juice"
+
+for j in juice_list:
+    if j == best_juice:
+        print(f"{j} is the healthiest juice!")
+        break
+else:
+    print(f"{best_juice} is not in the list of fruit juices.")
+    
+# 27. Write a Python program to print the quadruple of positive numbers. 
+for i in range(1, 100):
+    if i % 2 == 0: 
+        i = i * 4
+        print (i , end=",")
+
+# 28. Write a Python program using break to print the triple of positive numbers
+while True:
+    n = int(input("Enter a pos_num (or a neg_num to stop): "))
+    
+    if n < 0:
+        break
+    
+    if n > 0:
+        t = n * 3
+        print(f"Triple of {n} is {t}")
+
+
+# 29. Construct a Python program that returns a 2D array with the specified number of rows and columns, x and y respectively
+def createArray(a, b):
+    x = [[0 for j in range(b)] for i in range(a)]
+    return x
+
+r = 3
+c = 4
+res = createArray(r, c)
+for row in res:
+    print(row)
+
+
