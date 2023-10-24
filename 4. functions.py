@@ -76,3 +76,34 @@ a = int(input("Enter a number: "))
 result = check_prime(a)
 print(result)
 
+#9. Write a function that finds the Nth element of a geometric sequence.
+def nth_geo(a, r, n):
+    if n < 1:
+        return "N must be a positive integer."
+    t = a * (r ** (n - 1))
+    return t
+
+a = 2
+r = 3
+n = 5
+result = nth_geo(a, r, n)
+print(f"The {n}th term of the geometric sequence is {result}")
+
+# 8. Write a function for checking whether the number is a prime number or not
+def perfect_num(n):
+  counter = 0
+  for i in range(1, n):
+    if n % i == 0:
+      counter += i
+      if counter == n:
+        return True
+    else:
+      continue
+  return False
+
+a = int(input("Enter a number: "))
+result = perfect_num(a)
+if result:
+  print(f"{a} is a perfect Number")
+else:
+  print(f"{a} is not a perfect Number")
