@@ -41,3 +41,38 @@ m = lambda a, b: a * b
 
 r = m(5, 3)
 print("Result:", r)
+
+#Write a function for finding whether the give nnumber is an Armstrong number or not.
+def armstrongCheck(num):
+    str_num = str(num)
+    len_num = len(str_num)
+    sum_total = 0
+    
+    for d in str_num:
+        sum_total += int(d) ** len_num
+
+    return num == sum_total
+
+n = int(input("Enter a number: "))
+result = armstrongCheck(n)
+
+if result:
+    print(f"{n} iz armstrng numbr")
+else:
+    print(f"{n} iz not armstrng numbr")
+
+
+# 8. Write a function for checking whether the number is a prime number or not
+def check_prime(n):
+    for i in range(2, n + 1):
+        if n % i == 0:
+            if i < n:
+                print(f"{n} is not a Prime number")
+                break
+            else:
+                print(f"{n} is a Prime number")
+
+a = int(input("Enter a number: "))
+result = check_prime(a)
+print(result)
+
