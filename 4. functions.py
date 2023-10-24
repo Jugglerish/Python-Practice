@@ -89,21 +89,21 @@ n = 5
 result = nth_geo(a, r, n)
 print(f"The {n}th term of the geometric sequence is {result}")
 
-# 8. Write a function for checking whether the number is a prime number or not
+# 10. Write a program to check whether the number is a perfect number or not.
 def perfect_num(n):
-  counter = 0
-  for i in range(1, n):
-    if n % i == 0:
-      counter += i
-      if counter == n:
-        return True
-    else:
-      continue
-  return False
+    counter = 0
+    for i in range(1, n):
+        if n % i == 0:
+            counter += i
+            if counter == n:
+                print(f"{a} is a perfect Number")
+                break
+        else:
+            print(f"{a} is not a perfect Number")
+            break
 
 a = int(input("Enter a number: "))
 result = perfect_num(a)
-if result:
-  print(f"{a} is a perfect Number")
-else:
-  print(f"{a} is not a perfect Number")
+
+
+        
