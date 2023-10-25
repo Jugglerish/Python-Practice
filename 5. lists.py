@@ -102,5 +102,66 @@ for i in common_name:
     print(f"The botanical name for {i} is {botanical_name[counter]}")
     counter += 1
 
+#or
 
+common_name = ['Carrot', 'Garlic', 'Onion', 'Tomato', 'Potato']
+botanical_name = ['Daucus carota', 'Allium sativum', 'Allium cepa', 'Lycopersican esculentum', 'Solanum tuberosum']
 
+for common, botanical in zip(common_name, botanical_name):
+    print(f'The botanical name for {common} is {botanical}')
+
+# Write a program to iterate both lists simultaneously and display items from listl in original order and items from list2 in reverse order.
+
+# Given:
+# listl=[10, 20, 30, 40]
+# list2=[100, 200, 300, 400]
+
+# Expected output:
+# 10 400
+# 20 300
+# 30 200
+# 40 100
+
+list1=[10, 20, 30, 40]
+list2=[100, 200, 300, 400]
+list2.reverse()
+for lst, lst2 in zip(list1, list2):
+    print(lst, " ", lst2)
+
+#14. Write a program that will iterate through a list's values and indices. world_animals=['Anaconda", 'Red panda', 'Beaver', 'Killer whale', 'Platypus', 'Camel', 'Polar bear', 'King penguin', 'Snow leopard', 'Zebra', 'Plains bison']
+world_animals = ['Anaconda', 'Red panda', 'Beaver', 'Killer whale', 'Platypus', 'Camel', 'Polar bear', 'King penguin', 'Snow leopard', 'Zebra', 'Plains bison']
+
+for index, animal in enumerate(world_animals):
+    print(f"Index {index}: {animal}")
+
+# 15. Write a program to extend it by adding the sublist ["h", "i", "j"] in such a way that it will look like the following list.
+# Given list:
+# listl = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "I"],
+# "m", "n"] # sub list to add
+# sub_list = ["h", "i", "j"]
+# Expected Output:
+# ['a', 'b', ['c', ['d', 'e', ['f, 'g', 'h', 'T', 'j'], 'k'], 'T'], 'm', 'n']
+sub_list = ["h", "i", "j"]
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "I"], 'm', 'n']
+list1[2][1][2].extend(sub_list)
+print(list1)
+
+# 16. Replace the list's item with a new value if found
+# Given a Python list, write a program to find the value D in the list; if it is present, replace it with XYZ. Only update the first occurrence of an item. Given: listl=['A','B','C','D','E','F','G','H']
+# Expected output: ['A', 'B', 'C', 'XYZ', 'E', 'F', 'G', 'H']
+
+listl=['A','B','C','D','E','F','G','H']
+for i in range(len(listl)):
+    if listl[i] == 'D':
+        listl[i] = 'XYZ'
+        break
+print(listl)
+
+# 17. Write a program to merge all the items in a list into one long string. Given:
+# Listl=["Anaconda","is", "the","animal", "inhabiting", "the", "Tropical", "Rainforest"]
+list1=["Anaconda","is", "the","animal", "inhabiting", "the", "Tropical", "Rainforest"]
+string = ""
+for i in list1:
+    string = string + " " + i
+
+print(string)
