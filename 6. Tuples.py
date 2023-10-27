@@ -82,3 +82,62 @@ swapped_tuple1, swapped_tuple2 = swapping(tuple1, tuple2)
 print(swapped_tuple1)
 print(swapped_tuple2)
 
+# Create a tuple with only one item 12 by writing a program.
+empty_list = []
+for i in range(12, 13):
+    empty_list.append(i)
+
+empty_tuple = tuple(empty_list)
+print(empty_tuple)
+
+
+#Develop a program to copy particular elements from one tuple to another.
+t1 = (15, 25, 35, 45, 55, 65, 75, 85, 95, 105)
+t2 = t1[2:8]
+print(t2)
+
+# Write a program to sort tuples by the third item if needed.
+data = [(11, 12, 15), (13, 14, 11), (15, 16, 18), (17, 18, 13), (19, 20, 16)]
+sort = sorted(data, key=lambda x: x[2])
+for i in sort:
+    print(f"{i}")
+
+#11. Show how a tuple can be unpacked into three variables by writing a program
+
+mt = (1, 2, 3)
+
+v1, v2, v3 = mt
+
+print("v1:", v1)
+print("v2:", v2)
+print("v3:", v3)
+
+#12. Write a program to count the elements in a tuple.
+t = (42, "apple", "xyz", 7, "banana", 3.14, 99)
+
+c = len(t)
+
+print("Count:", c)
+
+# 13. Write a program to reverse a tuple.
+t = (42, "apple", "xyz", 7, "banana", 3.14, 99)
+my_list = []
+for i in t:
+    my_list.append(i)
+my_list.reverse()
+print(my_list)
+
+
+#or
+
+t = (42, "apple", "xyz", 7, "banana", 3.14, 99)
+reversed_tuple = tuple(reversed(t))
+print(reversed_tuple)
+
+
+# 14. Write a Python program to unpack a list of tuples into individual elements.
+t = [(42, "apple"), ("xyz", 7), ("banana", 3.14, 99), ("kjhgvcx")]
+e1, e2, *e3 = t
+print(e1)
+print(e2)
+print(e3)
