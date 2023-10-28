@@ -238,5 +238,21 @@ else:
 
 
 
+#Write a program to show the addition of elements to a set one by one.
+fruits = {"Allahabad Safeda", "Pant Prabhat", "Dhareedar", "Chittidar"}
+
+print("Current fruits in the set:", fruits)
+
+while True:
+    entry = input("Add a fruit (or type 'quit' to stop): ")
+
+    if entry == 'quit':
+        break
+
+    fruits.add(entry)
+
+    print("Updated fruits in the set:", fruits)
+
+print("Final fruits in the set:", fruits)
 
 
