@@ -103,4 +103,18 @@ for i in set2:
     print("Added:", i)
 print(set1)
 
+# 14. Write a Python script to create and print a dictionary ( x ,x^ * x) containing a number (between 1 and n) in the form (x, x).
+
+def power(n):
+    empty_dict = {}
+    for i in range(1,  n + 1):
+        empty_dict[i] = i ** i 
+    return empty_dict
+
+x = int(input("Input a number: "))
+calling = power(x)
+print(calling)
+
+
+
 
