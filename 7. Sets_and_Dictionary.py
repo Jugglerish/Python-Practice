@@ -115,6 +115,11 @@ x = int(input("Input a number: "))
 calling = power(x)
 print(calling)
 
-
+# 15. Find the highest three values of matching dictionary keys using the Python program. my_dict = { 'Ether':  233, 'Bitcoin': 4854, 'Litecoin': 789, 'Gaslimit': 13325}
+my_dict = { 'Ether':  233, 'Bitcoin': 4854, 'Litecoin': 789, 'Gaslimit': 13325}
+result_dict = sorted(my_dict.items(), key= lambda x: x[1], reverse = True)
+print(result_dict)
+final_dict = result_dict[:3]
+print(final_dict)
 
 
