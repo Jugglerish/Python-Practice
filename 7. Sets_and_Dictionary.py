@@ -122,4 +122,29 @@ print(result_dict)
 final_dict = result_dict[:3]
 print(final_dict)
 
+# 16. Make a replica of the sample dictionary with the dict() function:
+sampledict = {
+"brand": "HP",
+"model": "Pavilion",
+"year": 2022 
+}
+
+replica_dict = dict(sampledict)
+print(replica_dict)
+
+# 17. Using Python, write a program that removes all elements from a given dataset. set1 = {"Ether","Bitcoin","Litecoin"}
+set1 = {"Ether","Bitcoin","Litecoin"}
+set1.remove("Ether")
+set1.remove("Bitcoin")
+set1.remove("Litecoin")
+print(set1)
+
+# 17. Using Python, write a program that removes all elements from a given dataset. set1 = {"Ether","Bitcoin","Litecoin"}
+set1 = {1, 2, 3, 4, 4, 5}
+set2 = {5, 6, 7, 8, 9}
+if set1.isdisjoint(set2):
+    print("The sets have no elements in common.")
+else:
+    print("The sets have some elements in common.")
+
 
