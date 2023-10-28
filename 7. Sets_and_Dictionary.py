@@ -31,6 +31,31 @@ print(set3)
 set4 = set1 | set2
 print(set4)
 
+# Create a dictionary of pulses and their calorie counts
+pulses_calories = {
+    "Chickpeas": 164,
+    "Lentils": 116,
+    "Black beans": 127,
+    "Pinto beans": 115,
+    "Kidney beans": 112,
+    "Peas": 81
+}
+
+def calories(pulse):
+    if pulse in pulses_calories:
+        return pulses_calories[pulse]
+    else: 
+        return "Pulse not found in the dictionary."
+    
+input_pulse = input("Enter the pulse name here: ").capitalize()
+result = calories(input_pulse)
+
+if result != "Pulse not found in the dictionary.":
+    print(f"Calories for {input_pulse} is: {result}")
+else:
+    print("Pulse not found in the dictionary.")
+
+
 # 5. Write a Python program to eliminate elements (777,9,999) using remove(). setl={3, 4, 5, 6, 7, 8, 777, 9, 333, 999, 555, 444}
 set1={3, 4, 5, 6, 7, 8, 777, 9, 333, 999, 555, 444}
 set1.remove(999)
