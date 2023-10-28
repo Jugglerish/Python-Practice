@@ -147,4 +147,96 @@ if set1.isdisjoint(set2):
 else:
     print("The sets have some elements in common.")
 
+# 19. Remove the Intersection of a second setl ={16,21,12,22,23,32,65,698} set2={ 2, 8, 20, 21,28,45,50,54,33, 82, 126} set from the first set using a Python program.
+set1 = {16, 21, 12, 22, 23, 32, 65, 698}
+set2 = {2, 8, 20, 21, 28, 45, 50, 54, 33, 82, 126}
+
+set2.difference_update(set1)
+print(set2)
+
+# 20. If you want to construct a dictionary with the relevant fundamental values: 21-30; 31-40;41-50; and 51-60, write a Python program. Using the dictionary, get the fifth value of each of the keys.
+my_dictionary = {
+    '21-30': [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+    '31-40': [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+    '41-50': [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+    '51-60': [51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+}
+
+empty_dict = {}
+
+for key, value in my_dictionary.items():
+    empty_dict[key] = value[4]
+
+for key, value in empty_dict.items():
+    print(f"{key} fifth value is: {value}")
+
+
+
+# Write a program that updates the created dictionary with the contents given below. Print the contents of the dictionary before and after the update operation.
+# Pulses
+# Calories
+# Pinto beans  115
+# Kidney beans 112
+# Peas 81
+
+pulses_calories = {
+    "Chickpeas": 164,
+    "Lentils": 116,
+    "Black beans": 127
+}
+
+for key, value in pulses_calories.items():
+    print(f"{key}: {value} Calories.")
+
+while True:
+    pulse_input =input("Enter the pulse name: ").capitalize()
+    if pulse_input == "Quit":
+        break
+    try:
+        calorie_input = int(input(f"Enter the number of Calories {pulse_input} contain: "))
+        pulses_calories[pulse_input] = calorie_input
+    except ValueError:
+        print("It must be Number.")
+    
+for key, value in pulses_calories.items():
+    print(f"{key}: {value}")
+        
+
+# 22. Given myDict={'FF012':296,'GG013':426,'H H014':683,'LL015':964).Write a program to delete the element 'GG013' from the myDict.
+myDict={'FF012':296,'GG013':426,'H H014':683,'LL015':964}
+
+if 'GG013' in myDict:
+    myDict.pop("GG013")
+
+print(myDict)
+
+
+#or
+if 'GG013' in myDict:
+    del myDict["GG013"]
+print(myDict)
+
+#25. Using the given sets, write a Python program to determine the LESSER THAN OR EQUAL TO and GREATER THAN OR EQUAL TO operations on Set.
+# third Set of Pomegranate fruits Set3={'Dholka',' Kandhari','Vadki','Kabul"','Muskati Red','Paper Shelled'}
+# fourth Set of Mangoes Set4={'Banganapalli','Payri','Kesar', 'Neelum', 'Alphonso','Dasheri "','Totapuri"," Chausa'}
+
+set_a = {'Dholka', 'Kandhari', 'Vadki', 'Kabul', 'Muskati Red', 'Paper Shelled'}
+set_b = {'Banganapalli', 'Payri', 'Kesar', 'Neelum', 'Alphonso', 'Dasheri', 'Totapuri', 'Chausa'}
+
+is_subset = set_a <= set_b
+is_superset = set_a >= set_b
+
+if is_subset:
+    print("set_a is less than or equal to set_b")
+else:
+    print("set_a is not less than or equal to set_b")
+
+if is_superset:
+    print("set_a is greater than or equal to set_b")
+else:
+    print("set_a is not greater than or equal to set_b")
+
+
+
+
 
