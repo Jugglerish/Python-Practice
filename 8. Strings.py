@@ -189,3 +189,14 @@ str1 = "anopheles"
 str2 = str1[::-1]
 print(str2)
 
+# 17. Write a program that, when given a string, gives back the words arranged in reverse order.
+string = "A tree starts with a seed."
+str2 = string.split()
+lst = []
+for i in str2:
+    lst.append(i[::-1])
+print(" ".join(lst))
+
+#or
+# str1 = string[::-1]
+# print(str1)
