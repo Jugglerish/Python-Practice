@@ -124,6 +124,18 @@ for i in string_input:
         break
 
 
+# 11. Write a Python for loop program that obtains a user-supplied string and finds out if the first character is lowercase.
+string_input = input("Enter your string here: ")
+formating = string_input.split()
+lst = list(formating)
+counter = 1
+for i in lst:
+    counter += 1
+    if lst[counter] == i.title():
+        print(True)  
+    else:
+        print("False")
+        break
 
 
 
