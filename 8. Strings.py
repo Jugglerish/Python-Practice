@@ -184,3 +184,8 @@ string1 = "happiness multiplies as we divide it with others."
 output_string = capitalize_alternate_words(string1)
 print(output_string)
 
+# 16. Write a program that, when given a string "anopheles", will return a new string containing the same characters but in reverse order
+str1 = "anopheles"
+str2 = str1[::-1]
+print(str2)
+
