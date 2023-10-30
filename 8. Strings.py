@@ -153,3 +153,16 @@ print(result)
 print(result1)
     
 
+# 14. Write a Python program that takes the given string and finds out if the string includes alphanumeric characters.
+strl = "Genius is 1 percent inspiration and 99 percent perspiration"
+contains_alphanumeric = False
+
+for char in strl:
+    if char.isalnum():
+        contains_alphanumeric = True
+        break
+
+if contains_alphanumeric:
+    print("True")
+else:
+    print("False")
