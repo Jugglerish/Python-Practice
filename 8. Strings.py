@@ -166,3 +166,21 @@ if contains_alphanumeric:
     print("True")
 else:
     print("False")
+
+#15. Write a program to take a string as input and output a string with all the words in the input string capitalized and lowercase intermittently.
+def capitalize_alternate_words(input_string):
+    words = input_string.split()
+    result = []
+    
+    for i, word in enumerate(words):
+        if i % 2 == 0:
+            result.append(word.upper())
+        else:
+            result.append(word.lower())
+    
+    return ' '.join(result)
+
+string1 = "happiness multiplies as we divide it with others."
+output_string = capitalize_alternate_words(string1)
+print(output_string)
+
