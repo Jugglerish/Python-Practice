@@ -112,6 +112,18 @@ for i, char in enumerate(string1):
 print(vowel_indices)
 
 
+# 11. Write a Python for loop program that obtains a user-supplied string and finds out if the first character is lowercase.
+string_input = input("Enter your string here: ")
+
+for i in string_input:
+    if i[0] == i.lower():
+        print("True")
+        break
+    else:
+        print("False")
+        break
+
+
 
 
 
