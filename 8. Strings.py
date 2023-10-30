@@ -200,3 +200,8 @@ print(" ".join(lst))
 #or
 # str1 = string[::-1]
 # print(str1)
+
+# 18 Write a program that, when given two substrings, gives back a combined string. 
+substrl = "An ounce of practice subate?" 
+substr2 = "is worth a thousand words"
+print(substrl+"\n",substr2)
