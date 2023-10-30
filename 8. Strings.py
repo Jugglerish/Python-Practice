@@ -74,3 +74,14 @@ print(string.isdigit())
  
 string = '13Ishmeet'
 print(string.isdigit())
+
+
+# 9. The longest word in the dictionary is "Pneumono ultramicroscopicsilicovolcanoconiosis." Write a program that takes the longest given word in the dictionary as an input and outputs the count of only the distinct characters in it.
+string_input = input("Enter your string here: ").lower()
+distinct = set(string_input)
+counter = 0
+for i in distinct:
+    counter += 1
+print(counter)
+
+# or by len method
