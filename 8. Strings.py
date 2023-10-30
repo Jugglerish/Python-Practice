@@ -85,3 +85,33 @@ for i in distinct:
 print(counter)
 
 # or by len method
+
+
+# 10. Given: "string1=Pneumonoultramicroscopicsilicovolcanoconiosis." Write a Python program that takes the given string and returns a new string with all the vowels stripped out.
+string1= "Pneumonoultramicroscopicsilicovolcanoconiosis."
+vowels = "aeiou"
+lst = {}
+for i in string1:
+    for j in vowels:
+        if i == j:
+            lst[i] = string1[i]
+        else:
+            continue
+
+print(lst)
+string1 = "Pneumonoultramicroscopicsilicovolcanoconiosis."
+vowels = "aeiou"
+vowel_indices = {}
+for i, char in enumerate(string1):
+    if char in vowels:
+        if char in vowel_indices:
+            vowel_indices[char].append(i)
+        else:
+            vowel_indices[char] = [i]
+
+print(vowel_indices)
+
+
+
+
+
