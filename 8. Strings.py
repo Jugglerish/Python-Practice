@@ -61,3 +61,9 @@ counter = 0
 for i in string_input:
     counter +=1 
 print("Total num of chracters:", counter)
+
+
+# 7. Write a program that obtains a user-supplied string. Use the isnumeric() to determine whether or not it contains numbers.
+string_input = input("Enter your string here: ")
+string = string_input.isnumeric()
+print(string)
