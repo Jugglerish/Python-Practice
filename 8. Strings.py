@@ -137,5 +137,19 @@ for i in lst:
         print("False")
         break
 
+#13. Write a Python program that takes the given string and finds out if all the words are in upper case.
+def upper_check(n):
+    if n == n.upper():
+        return True
+    else:
+        return False
 
+strl = "STRINGS"
+str2= "Strings"
+result = upper_check(strl)
+result1 = upper_check(str2)
+
+print(result)
+print(result1)
+    
 
