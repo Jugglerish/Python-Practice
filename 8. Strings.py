@@ -49,3 +49,15 @@ for j in wordlist:
     word_counter += 1
 
 print(f"Character count: {counter} \nWord count: {word_counter}")
+
+# 6. Write a program to elicit a string from the user in lower or small case letters and then 
+stringinput = input("Enter your string here: ").lower()
+stringaa = stringinput.title() # or stringaa = stringinput.capilatize()
+print(stringaa)
+
+# 5. Write a program to elicit a string from the user and then determine the total number of characters included in a string.
+string_input = input("Enter your string here: ").lower()
+counter = 0
+for i in string_input:
+    counter +=1 
+print("Total num of chracters:", counter)
