@@ -67,3 +67,10 @@ print("Total num of chracters:", counter)
 string_input = input("Enter your string here: ")
 string = string_input.isnumeric()
 print(string)
+
+# 8. Write a program that obtains a user-supplied string. Use the isdigits() to determine whether or not it contains digits.
+string = '065262'
+print(string.isdigit())
+ 
+string = '13Ishmeet'
+print(string.isdigit())
