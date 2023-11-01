@@ -34,6 +34,11 @@ print(lst)
 lst = [i for i in range(2, 51) if all(i % x != 0 for x in range(2, i))]
 print(lst)
 
+#4. Use iterators for printing a list. Score = [ 80 90 87 76 55 44]
+Score = [80, 90, 87, 76, 55, 44]
+for score in Score:
+    print(score)
+
 
 #5. Write a map function to convert a string to lowercase letters [Hello, India, Tamil, Malayalam, Delhi].
 s = ["Hello", "India", "Tamil", "Malayalam", "Delhi"]
@@ -51,3 +56,10 @@ import functools
 lst = [1, 2, 68, 10, 12, 14]
 reduced_list = functools.reduce(lambda x,y: x+y, lst)
 print(reduced_list)
+
+#8. Generate permutations in the range (0, 50).
+a = 0
+b = 5
+permutaion_range = range(a, b)
+permutaion_list = list(permutations(permutaion_range))
+print(permutaion_list)
