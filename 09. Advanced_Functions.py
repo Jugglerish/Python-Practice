@@ -33,3 +33,9 @@ print(lst)
 #3. Generate prime numbers in the range 0-50 using list comprehension
 lst = [i for i in range(2, 51) if all(i % x != 0 for x in range(2, i))]
 print(lst)
+
+# 7. Write a reduce function for the list [1, 2, 68, 10, 12, 14] for the expression x + y.
+import functools 
+lst = [1, 2, 68, 10, 12, 14]
+reduced_list = functools.reduce(lambda x,y: x+y, lst)
+print(reduced_list)
