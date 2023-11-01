@@ -75,3 +75,13 @@ x = int(input("Enter a number: "))
 y = int(input("Enter a number: "))
 xy = GCD(x, y)
 print(xy)
+
+# Python3 program to  find n'th Lucas number 
+def lucas(n): 
+	if n == 0: 
+		return 2; 
+	if n == 1: 
+		return 1; 
+	return lucas(n - 1) + lucas(n - 2); 
+n = 9; 
+print(lucas(n)); 
