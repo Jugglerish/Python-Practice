@@ -25,3 +25,7 @@ def functiond(x, y):
 def functione(x, y):
     result4 = lambda x,y: (x**2) + (y**2) + 18
     return result4
+
+# 2. Generate odd numbers in the range 0 - 100 using list comprehension
+lst = [i for i in range(1, 101) if i % 2 != 0]
+print(lst)
