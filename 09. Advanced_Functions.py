@@ -85,3 +85,15 @@ def lucas(n):
 	return lucas(n - 1) + lucas(n - 2); 
 n = 9; 
 print(lucas(n)); 
+
+
+#11. Write a generator for prime numbers.
+def prime_generator(n):
+    for i in range(2, n+1):
+        if is_prime(i):
+            yield i
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False 
+
