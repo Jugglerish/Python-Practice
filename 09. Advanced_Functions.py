@@ -34,6 +34,12 @@ print(lst)
 lst = [i for i in range(2, 51) if all(i % x != 0 for x in range(2, i))]
 print(lst)
 
+# 6. Write a map function to sort these words based on the length of the word [Hello, India, Tamil, Malayalam, Delhi].
+words = ["Hello", "India", "Tamil", "Malayalam", "Delhi"]
+sorted_words = sorted(words, key=lambda word: len(word))
+print(sorted_words)
+
+
 # 7. Write a reduce function for the list [1, 2, 68, 10, 12, 14] for the expression x + y.
 import functools 
 lst = [1, 2, 68, 10, 12, 14]
