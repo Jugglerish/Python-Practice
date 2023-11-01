@@ -63,3 +63,15 @@ b = 5
 permutaion_range = range(a, b)
 permutaion_list = list(permutations(permutaion_range))
 print(permutaion_list)
+
+# 9. Write a recursive program to find the GCD of two integer numbers.
+def GCD(a, b):
+    if b == 0:
+        return a
+    else:
+        return GCD(b, a%b)
+
+x = int(input("Enter a number: "))
+y = int(input("Enter a number: "))
+xy = GCD(x, y)
+print(xy)
