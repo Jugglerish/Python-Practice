@@ -34,6 +34,12 @@ print(lst)
 lst = [i for i in range(2, 51) if all(i % x != 0 for x in range(2, i))]
 print(lst)
 
+
+#5. Write a map function to convert a string to lowercase letters [Hello, India, Tamil, Malayalam, Delhi].
+s = ["Hello", "India", "Tamil", "Malayalam", "Delhi"]
+mappedused = list(map(lambda x: x.lower(), s))
+print(mappedused)
+
 # 6. Write a map function to sort these words based on the length of the word [Hello, India, Tamil, Malayalam, Delhi].
 words = ["Hello", "India", "Tamil", "Malayalam", "Delhi"]
 sorted_words = sorted(words, key=lambda word: len(word))
