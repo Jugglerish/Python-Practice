@@ -29,3 +29,7 @@ def functione(x, y):
 # 2. Generate odd numbers in the range 0 - 100 using list comprehension
 lst = [i for i in range(1, 101) if i % 2 != 0]
 print(lst)
+
+#3. Generate prime numbers in the range 0-50 using list comprehension
+lst = [i for i in range(2, 51) if all(i % x != 0 for x in range(2, i))]
+print(lst)
