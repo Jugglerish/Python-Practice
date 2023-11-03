@@ -34,3 +34,24 @@ triangle = Triangle(base, height)
 
 area = triangle.calculate_area()
 print(area)
+
+
+
+#4. Write a static method that check whether all words in the list starts with vowel.
+class VowelsCheck:
+    @staticmethod
+    def lets_check_vowels(word_lst):
+        vowels = 'AEIOUaeiou'
+
+        for word in word_lst:
+            if word[0] not in vowels:
+                return False
+        return True
+
+words = ["apple", "orange", "elephant", "banana"]
+result = VowelsCheck.lets_check_vowels(words)
+
+if result:
+    print("All words start with a vowel.")
+else:
+    print("Not all words start with a vowel.")
