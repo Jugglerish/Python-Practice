@@ -214,3 +214,36 @@ def m():
 m()
 
 
+# 10. Write a menu driven program to calculate perimeter and number of diagonals with number of sides as input.
+def p(n, s):
+    perim = n * s
+    return perim
+
+def d(n):
+    diag = (n * (n - 3)) / 2
+    return diag
+
+while True:
+    print("Menu:")
+    print("1. Calculate Perimeter")
+    print("2. Calculate Number of Diagonals")
+    print("3. Exit")
+    
+    c = input("Enter your choice (1/2/3): ")
+
+    if c == '1':
+        n = int(input("Enter the number of sides: "))
+        s = float(input("Enter the side length: "))
+        perim = p(n, s)
+        print(f"Perimeter: {perim}")
+    elif c == '2':
+        n = int(input("Enter the number of sides: "))
+        diag = d(n)
+        print(f"Diagonals: {diag}")
+    elif c == '3':
+        print("Exit. Bye!")
+        break
+    else:
+        print("Invalid choice. Select 1, 2, or 3.")
+
+
