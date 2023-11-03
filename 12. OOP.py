@@ -118,3 +118,32 @@ class Bnk:
 b = Bnk("MyBank", "New York", 1000)
 del b
 
+
+# Create an OOP Program to determine the value and characteristics of the roots. Roots includes both real and complex numbers.
+import math
+
+class RootsCalculator:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def calculate_roots(self):
+        discriminant = self.b**2 - 4 * self.a * self.c
+
+        if discriminant > 0:
+            return "Two real roots"
+        elif discriminant == 0:
+            return "One real root"
+        else:
+            return "Complex roots"
+
+if __name__ == "__main__":
+    a = float(input("Enter the coefficient of x^2 (a): "))
+    b = float(input("Enter the coefficient of x (b): "))
+    c = float(input("Enter the constant term (c): "))
+    
+    calculator = RootsCalculator(a, b, c)
+    result = calculator.calculate_roots()
+    print(f"Roots: {result}")
+
