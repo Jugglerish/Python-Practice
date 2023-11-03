@@ -1,3 +1,4 @@
+
 # using OOP. The details to receive are staff_id, basic_pay, years_of_experience, total_allowance and total_deduction with the help of Constructor. Using methods calculate net_pay
 class staff:
 def __init__(s, id, basicpay, experience, allowance, deduction):
@@ -16,3 +17,20 @@ n = e.calculate_netpay()
 print(f"Employee ID: {e.id}")
 print(f"Net Salary: ${n}")
 
+
+# 3. Write a program to calculate area, perimeter and height of the triangle using the concept of classes and objects.
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def calculate_area(self):
+        return 0.5 * self.base * self.height
+
+base = 5.0
+height = 3.0
+
+triangle = Triangle(base, height)
+
+area = triangle.calculate_area()
+print(area)
