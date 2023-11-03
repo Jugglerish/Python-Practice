@@ -147,3 +147,70 @@ if __name__ == "__main__":
     result = calculator.calculate_roots()
     print(f"Roots: {result}")
 
+
+# 9. Write an OOP program which reads 2 points and performs following functions with users choice
+           # i. Distance between 2 points.
+            #ii. Slope between 2 points.
+           # iii. Checking whether the two points are inside/ outside/on the circle x²+ y²= 16
+import math
+
+class A:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+class B:
+    def __init__(self, r):
+        self.r = r
+
+    def c(self, p):
+        return p.a**2 + p.b**2 < self.r**2
+
+    def o(self, p):
+        return p.a**2 + p.b**2 == self.r**2
+
+    def i(self, p):
+        return p.a**2 + p.b**2 > self.r**2
+
+def u():
+    print("Choose an operation:")
+    print("1. Calculate distance between two points")
+    print("2. Calculate slope between two points")
+    print("3. Check if two points are inside/outside/on the circle")
+    return int(input("Enter your choice (1/2/3): ")
+
+def m():
+    a1, b1 = map(float, input("Enter coordinates of the first point (a1 b1): ").split())
+    a2, b2 = map(float, input("Enter coordinates of the second point (a2 b2): ").split())
+    
+    p1 = A(a1, b1)
+    p2 = A(a2, b2)
+    
+    c = u()
+    
+    if c == 1:
+        d = math.sqrt((p2.a - p1.a)**2 + (p2.b - p1.b)**2)
+        print(f"Distance between the two points: {d:.2f}")
+    elif c == 2:
+        if p2.a - p1.a == 0:
+            print("Slope is undefined (vertical line).")
+        else:
+            s = (p2.b - p1.b) / (p2.a - p1.a)
+            print(f"Slope between the two points: {s:.2f}")
+    elif c == 3:
+        r = 4  # Radius of the circle a^2 + b^2 = 16
+        C = B(r)
+        if C.o(p1) and C.o(p2):
+            print("Both points are on the circle.")
+        elif C.i(p1) and C.i(p2):
+            print("Both points are inside the circle.")
+        elif C.c(p1) and C.c(p2):
+            print("Both points are outside the circle.")
+        else:
+            print("One point is inside and one is outside the circle.")
+    else:
+        print("Invalid choice. Please select 1, 2, or 3.")
+
+m()
+
+
