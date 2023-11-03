@@ -90,3 +90,17 @@ if __name__ == "__main__":
     else:
         print("Bad input. Enter '1' or '2'.")
 
+
+# 6. Add a method reflect to class Point, which returns a new about the x axis and y axis. For example, Point(1,2), point which is the reflection of the point reflection is Point (-1,-2).
+class P:
+    def __init__(s, x, y):
+        s.x, s.y = x, y
+    def __str__(s):
+        return f"{s.x},{s.y}"
+    def r(s):
+        return P(s.x, -s.y)
+
+print(P(3, 5).r())
+
+
+
