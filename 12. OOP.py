@@ -103,4 +103,18 @@ class P:
 print(P(3, 5).r())
 
 
+# 7. Create a Class for Bank which holds few details about the bank and define destructor which should make all the variables as "None" and print the message "The Process ends".
+class Bnk:
+    def __init__(self, nm, loc, acnt_cnt):
+        self.nm = nm
+        self.loc = loc
+        self.acnt_cnt = acnt_cnt
+
+    def __del__(self):
+        self.nm = None
+        self.loc = None
+        self.acnt_cnt = None
+        print("The Process ends")
+b = Bnk("MyBank", "New York", 1000)
+del b
 
