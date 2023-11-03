@@ -55,3 +55,38 @@ if result:
     print("All words start with a vowel.")
 else:
     print("Not all words start with a vowel.")
+
+
+
+# 5. Write a program which receives either basic_pay and total_allowance or net pay and print the net_pay using separate method and calculation of net pay from basic_pay and allowance should be done using classmethod.
+class C:
+    def __init__(s, b=0, a=0):
+        s.b = b
+        s.a = a
+
+    @classmethod
+    def c(cls, b, a):
+        return b + a
+
+    def m(s):
+        return s.c(s.b, s.a)
+
+    def d(s, n):
+        print(f"N: ${n}")
+
+if __name__ == "__main__":
+    c = input("1 for calc or 2 for net: ")
+
+    if c == '1':
+        b = float(input("B: $"))
+        a = float(input("A: $"))
+        x = C(b, a)
+        n = x.m()
+        x.d(n)
+    elif c == '2':
+        n = float(input("N: $"))
+        x = C()
+        x.d(n)
+    else:
+        print("Bad input. Enter '1' or '2'.")
+
