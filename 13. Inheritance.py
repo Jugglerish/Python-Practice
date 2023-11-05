@@ -46,8 +46,7 @@ print("\nObject D:")
 obj_d.show_info()
 
 
-
-
+# 2. Write a program that extends the class Employee. Derive a class Manager from Employee so that it lists all the details of the manager as well as the details of employees working under that manager.
 class Karamchari:
     def __init__(self, emp_id, naam, vetan):
         self.emp_id = emp_id
