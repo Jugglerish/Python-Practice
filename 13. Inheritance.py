@@ -253,3 +253,28 @@ print(f"Volume of the cube with side length 5: {y}")
 z = O(3, 4)
 w = z.v()
 print(f"Volume of the cone with radius 3 and height 4: {w}")
+
+
+# 6. Write a program with a class Person, derive a class Baseball Player from Person and display all the details of a famous baseball player.
+class A:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+class B(A):
+    def __init__(self, a, b, c, d):
+        super().__init__(a, b)
+        self.c = c
+        self.d = d
+
+    def e(self):
+        print(f"a: {self.a}")
+        print(f"b: {self.b}")
+        print(f"c: {self.c}")
+        print(f"d: {self.d}
+
+f = B("Player Name", 30, "Team Name", "Position")
+f.e()
+
+
+# 7. Write a Python program with a class quadrilateral and derive classes for Square, Rectangle and Trapezium. While receiving value from the users for the objects, ensure the correctness of the values using constructs in child classes and Parent class.
