@@ -278,3 +278,79 @@ f.e()
 
 
 # 7. Write a Python program with a class quadrilateral and derive classes for Square, Rectangle and Trapezium. While receiving value from the users for the objects, ensure the correctness of the values using constructs in child classes and Parent class.
+class Q:
+    def __init__(self, s1, s2, s3, s4):
+        if self.v(s1, s2, s3, s4):
+            self.s1 = s1
+            self.s2 = s2
+            self.s3 = s3
+            self.s4 = s4
+        else:
+            raise ValueError("Invalid sides")
+
+    def v(self, s1, s2, s3, s4):
+        return (s1 + s2 + s3 > s4 and s1 + s2 + s4 > s3 and s1 + s3 + s4 > s2 and s2 + s3 + s4 > s1)
+
+    def a(self):
+        pass
+
+class S(Q):
+    def __init__(self, s):
+        super().__init__(s, s, s, s)
+        self.s = s
+
+    def a(self):
+        return self.s ** 2
+
+class R(Q):
+    def __init__(self, l, w):
+        super().__init__(l, w, l, w)
+        self.l = l
+        self.w = w
+
+    def a(self):
+        return self.l * self.w
+
+class T(Q):
+    def __init__(self, t, b, h, s):
+        super().__init__(t, b, h, s)
+        self.t = t
+        self.b = b
+        self.h = h
+        self.s = s
+
+    def v(self, t, b, h, s):
+        return (t > 0 and b > 0 and h > 0 and s > 0)
+
+    def a(self):
+        return 0.5 * (self.t + self.b) * self.h
+
+if __name__ == "__main__":
+    while True:
+        try:
+            c = input("Enter shape (S, R, T) or 'q' to exit: ").strip().lower()
+            if c == 'q':
+                break
+            elif c == 's':
+                s = float(input("Enter side: "))
+                s = S(s)
+                print(s)
+                print(f"Area: {s.a()}")
+            elif c == 'r':
+                l = float(input("Enter length: "))
+                w = float(input("Enter width: "))
+                r = R(l, w)
+                print(r)
+                print(f"Area: {r.a()}")
+            elif c == 't':
+                t = float(input("Enter top base: "))
+                b = float(input("Enter bottom base: "))
+                h = float(input("Enter height: "))
+                s = float(input("Enter side: "))
+                t = T(t, b, h, s)
+                print(t)
+                print(f"Area: {t.a()}")
+            else:
+                print("Invalid shape. Please enter 'S', 'R', or 'T'.")
+        except ValueError:
+            print("Invalid input. Please enter valid values for the sides.")
