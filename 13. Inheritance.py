@@ -175,7 +175,6 @@ class S:
     def count_total_marks(self):
         return self.t + self.a + self.s
 
-# Example usage:
 class R:
     def __init__(self, n, r):
         self.n = n
@@ -225,3 +224,32 @@ student.ss(90)
 student.c()
 student.d()
 
+# 5. Write a program that extends the class shape to calculate the volume of the cube and the cone.
+import math
+
+class S:
+    def v(self):
+        pass
+
+class C(S):
+    def __init__(self, a):
+        self.a = a
+    
+    def v(self):
+        return self.a**3
+
+class O(S):
+    def __init__(self, r, h):
+        self.r = r
+        self.h = h
+    
+    def v(self):
+        return (1/3) * math.pi * self.r**2 * self.h
+
+x = C(5)
+y = x.v()
+print(f"Volume of the cube with side length 5: {y}")
+
+z = O(3, 4)
+w = z.v()
+print(f"Volume of the cone with radius 3 and height 4: {w}")
