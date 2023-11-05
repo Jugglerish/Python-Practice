@@ -92,3 +92,31 @@ rajesh.karamchari_jodo(shyam)
 print("Prabandhak Vivaran:")
 rajesh.dikhaao()
 
+
+#3. Write a program that extends the employee class so that it stores two more data members: DOB and Date_of_Hiring. The date must be defined as a separate class.
+class A:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __str__(self):
+        return f"{self.x:02d}/{self.y:02d}/{self.z}"
+
+class B:
+    def __init__(self, p, q, r, s):
+        self.p = p
+        self.q = q
+        self.r = r
+        self.s = s
+
+    def __str__(self):
+        return f"I: {self.p}\nN: {self.q}\nB: {self.r}\nH: {self.s}"
+
+d = A(10, 5, 1990)
+h = A(15, 8, 2020)
+
+e = B("John Doe", 12345, d, h)
+
+print(e)
+
