@@ -1,3 +1,4 @@
+# 1. Write Python code for a school management system with three user categories and show all three types of inheritance in it.
 class A:
     def __init__(self, x, y):
         self.x = x
