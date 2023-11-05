@@ -120,3 +120,108 @@ e = B("John Doe", 12345, d, h)
 
 print(e)
 
+#4. Write a program that extends the class Result so that, the final result of the student is evaluated based on the marks obtained in tests, activities, and sports.
+class S:
+    def __init__(self, n, r):
+        self.n = n
+        self.r = r
+        self.t = 0
+        self.a = 0
+        self.s = 0
+        self.f = None
+
+    def st(self, m):
+        self.t = m
+
+    def sa(self, m):
+        self.a = m
+
+    def ss(self, m):
+        self.s = m
+
+    def c(self):
+        t = self.t + self.a + self.s
+
+        if t >= 90:
+            self.f = "A+"
+        elif t >= 80:
+            self.f = "A"
+        elif t >= 70:
+            self.f = "B"
+        elif t >= 60:
+            self.f = "C"
+        else:
+            self.f = "F"
+
+    def d(self):
+        print(f"N: {self.n}")
+        print(f"R: {self.r}")
+        print(f"T: {self.t}")
+        print(f"A: {self.a}")
+        print(f"S: {self.s}")
+        print(f"F: {self.f}")
+        
+    def gt_full_name(self):
+        return f"{self.n} (Roll Number: {self.r})"
+
+    def print_result_message(self):
+        if self.f == "A+":
+            print(f"Wow, {self.n} scored an A+! That's amazing!")
+        elif self.f == "F":
+            print(f"Oh no, {self.n} failed. Better luck next time!")
+        else:
+            print(f"{self.n}'s result is {self.f}.")
+            
+    def count_total_marks(self):
+        return self.t + self.a + self.s
+
+# Example usage:
+class R:
+    def __init__(self, n, r):
+        self.n = n
+        self.r = r
+        self.t = 0
+        self.a = 0
+        self.s = 0
+        self.f = None
+
+    def st(self, m):
+        self.t = m
+
+    def sa(self, m):
+        self.a = m
+
+    def ss(self, m):
+        self.s = m
+
+    def c(self):
+        t = self.t + self.a + self.s
+
+        if t >= 90:
+            self.f = "A+"
+        elif t >= 80:
+            self.f = "A"
+        elif t >= 70:
+            self.f = "B"
+        elif t >= 60:
+            self.f = "C"
+        else:
+            self.f = "F"
+
+    def d(self):
+        print(f"N: {self.n}")
+        print(f"R: {self.r}")
+        print(f"T: {self.t}")
+        print(f"A: {self.a}")
+        print(f"S: {self.s}")
+        print(f"F: {self.f}")
+
+
+# Example usage:
+student = R("Ishmeet", "12345")
+student.st(75)
+student.sa(85)
+student.ss(90)
+student.c()
+student.d()
+
