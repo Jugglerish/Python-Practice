@@ -145,3 +145,37 @@ section = "A"
 
 obj = C(school, class_name, section)
 obj.show()
+
+# . Write a Python program to evaluate whether the student is overall passing or not where it has a hierarchy of classes to store the students and the marks. The passing criteria for a subject a the student should have obtained 50 marks. If the student is passed in all subjects, then he is overall passed or else not.
+class S:
+    def __init__(self, n, s):
+        self.n = n
+        self.s = s
+
+    def p(self):
+        return self.s >= 50
+
+class St:
+    def __init__(self, n, s):
+        self.n = n
+        self.s = s
+
+    def o(self):
+        for i in self.s:
+            if not i.p():
+                return False
+        return True
+
+if __name__ == "__main__":
+    s = [
+        S("Math", 65),
+        S("Science", 55),
+        S("English", 40),
+    ]
+
+    st = St("John Doe", s)
+
+    if st.o():
+        print(f"{st.n} is overall passing.")
+    else:
+        print(f"{st.n} is not overall passing.")
