@@ -48,3 +48,42 @@ print("\nMatrix 2:")
 print(m2)
 print("\nMatrix 1 * Matrix 2:")
 print(r)
+
+# 3. Using abstract class, implement matrix determinant with two abstract methods, three CrossThreeDeterminants and two CrossTwo Determinants.
+from abc import ABC, abstractmethod
+
+class MatrixDeterminantCalculator(ABC):
+    @abstractmethod
+    def determinant_3x3(self, matrix):
+        pass
+
+    @abstractmethod
+    def determinant_2x2(self, matrix):
+        pass
+
+class DeterminantCalculator(MatrixDeterminantCalculator):
+    def determinant_3x3(self, matrix):
+        if len(matrix) != 3 or len(matrix[0]) != 3:
+            raise ValueError("Matrix must be 3x3 for determinant_3x3 calculation.")
+        a, b, c = matrix[0]
+        d, e, f = matrix[1]
+        g, h, i = matrix[2]
+        return a * e * i + b * f * g + c * d * h - c * e * g - a * f * h - b * d * i
+
+    def determinant_2x2(self, matrix):
+        if len(matrix) != 2 or len(matrix[0]) != 2:
+            raise ValueError("Matrix must be 2x2 for determinant_2x2 calculation.")
+        a, b = matrix[0]
+        c, d = matrix[1]
+        return a * d - b * c
+
+calculator = DeterminantCalculator()
+
+matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix_2x2 = [[2, 3], [4, 5]]
+
+determinant_3x3 = calculator.determinant_3x3(matrix_3x3)
+determinant_2x2 = calculator.determinant_2x2(matrix_2x2)
+
+print(f"Determinant of 3x3 matrix: {determinant_3x3}")
+print(f"Determinant of 2x2 matrix: {determinant_2x2}")
