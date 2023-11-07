@@ -109,3 +109,39 @@ list2 = [3, 3, 3, 3, 3]
 comparison = ListComparer(list1, list2)
 count = comparison <= list2
 print(f"Number of elements in list1 that are <= list2: {count}")
+
+# 5. Write a Python program to print the school name, class, and section using the method overriding with the help of multilevel inheritance.
+class A:
+    def __init__(self, a):
+        self.a = a
+
+    def show(self):
+        print(f"School: {self.a}")
+
+
+class B(A):
+    def __init__(self, a, b):
+        super().__init__(a)
+        self.b = b
+
+    def show(self):
+        super().show()
+        print(f"Class: {self.b}")
+
+
+class C(B):
+    def __init__(self, a, b, c):
+        super().__init__(a, b)
+        self.c = c
+
+    def show(self):
+        super().show()
+        print(f"Section: {self.c}")
+
+
+school = "Example School"
+class_name = "Class 10"
+section = "A"
+
+obj = C(school, class_name, section)
+obj.show()
