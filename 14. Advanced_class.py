@@ -254,3 +254,43 @@ def g():
 if __name__ == "__main__":
     g()
 
+# 8. Write a Python program to execute the followings.
+#a. Create a template for the users in a school management system.
+#b. Derive two classes for teachers and students from the template created in (a).
+#c. Store the values in objects of the derived classes.
+
+class A:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+class B(A):
+    def __init__(self, a, b, d):
+        super().__init__(a, b, "Teacher")
+        self.d = d
+
+    def display_info_b(self):
+        print(f"A: {self.a}, B: {self.b}, C: {self.c}, D: {self.d}")
+
+class C(A):
+    def __init__(self, a, b, e):
+        super().__init__(a, b, "Student")
+        self.e = e
+
+    def display_info_c(self):
+        print(f"A: {self.a}, B: {self.b}, C: {self.c}, E: {self.e}")
+
+b1 = B("Mr. Smith", 35, "Mathematics")
+b2 = B("Ms. Johnson", 40, "History")
+
+c1 = C("Alice", 15, 10)
+c2 = C("Bob", 16, 11)
+
+print("B:")
+b1.display_info_b()
+b2.display_info_b()
+
+print("\nC:")
+c1.display_info_c()
+c2.display_info_c()
