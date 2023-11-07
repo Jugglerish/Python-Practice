@@ -87,3 +87,25 @@ determinant_2x2 = calculator.determinant_2x2(matrix_2x2)
 
 print(f"Determinant of 3x3 matrix: {determinant_3x3}")
 print(f"Determinant of 2x2 matrix: {determinant_2x2}")
+
+# 4. Write a Python program to overload the relation operator, less than or equal to the compare two lists, namely, list1 and list2, and print the number of elements in list1 that are lesser than or equal to the elements in list2.
+class ListComparer:
+    def __init__(self, list1, list2):
+        self.list1 = list1
+        self.list2 = list2
+
+    def __le__(self, other):
+        if len(self.list1) != len(self.list2):
+            raise ValueError("Both lists must have the same length for comparison.")
+        count = 0
+        for elem1, elem2 in zip(self.list1, self.list2):
+            if elem1 <= elem2:
+                count += 1
+        return count
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [3, 3, 3, 3, 3]
+
+comparison = ListComparer(list1, list2)
+count = comparison <= list2
+print(f"Number of elements in list1 that are <= list2: {count}")
