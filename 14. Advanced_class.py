@@ -179,3 +179,78 @@ if __name__ == "__main__":
         print(f"{st.n} is overall passing.")
     else:
         print(f"{st.n} is not overall passing.")
+
+#7. Write a Python program for user management for a school management system using abstract base class (ABC).
+from abc import ABC, abstractmethod
+
+class A(ABC):
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    @abstractmethod
+    def d(self):
+        pass
+
+class B(A):
+    def __init__(self, a, b, c, d):
+        super().__init__(a, b, c)
+        self.d = d
+
+    def e(self):
+        print(f"A: a: {self.a}, b: {self.b}, c: {self.c}")
+
+class C(A):
+    def __init__(self, a, b, c, e):
+        super().__init__(a, b, c)
+        self.e = e
+
+    def f(self):
+        print(f"B: a: {self.a}, b: {self.b}, c: {self.c}")
+
+def g():
+    b_objects = []
+    c_objects = []
+
+    while True:
+        print("1. Create B")
+        print("2. Create C")
+        print("3. Display Bs")
+        print("4. Display Cs")
+        print("5. Exit")
+
+        h = input("Enter your choice: ")
+
+        if h == '1':
+            a = input("Enter a: ")
+            b = input("Enter b: ")
+            c = input("Enter c: ")
+            d = input("Enter d: ")
+            b_object = B(a, b, c, d)
+            b_objects.append(b_object)
+
+        elif h == '2':
+            a = input("Enter a: ")
+            b = input("Enter b: ")
+            c = input("Enter c: ")
+            e = input("Enter e: ")
+            c_object = C(a, b, c, e)
+            c_objects.append(c_object)
+
+        elif h == '3':
+            print("Bs:")
+            for b_object in b_objects:
+                b_object.e()
+
+        elif h == '4':
+            print("Cs:")
+            for c_object in c_objects:
+                c_object.f()
+
+        elif h == '5':
+            break
+
+if __name__ == "__main__":
+    g()
+
