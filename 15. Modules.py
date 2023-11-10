@@ -124,3 +124,37 @@ res_hcf = lh.calc_hcf(*nums)
 print(f"LCM of {', '.join(map(str, nums))} is: {res_lcm}")
 print(f"HCF of {', '.join(map(str, nums))} is: {res_hcf}")
 
+
+# 8. Construct a package for estimating the slope and intercepts of the given line in the form of ax+by+c=0 Here a, b and c are the inputs from the users
+class LineEstimator:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def slope(self):
+        return -self.a / self.b if self.b != 0 else None
+
+    def y_intercept(self):
+        return -self.c / self.b if self.b != 0 else None
+
+    def x_intercept(self):
+        return -self.c / self.a if self.a != 0 else None
+
+
+if __name__ == "__main__":
+    try:
+        a = float(input("Enter the coefficient 'a': "))
+        b = float(input("Enter the coefficient 'b': "))
+        c = float(input("Enter the coefficient 'c': "))
+
+        line = LineEstimator(a, b, c)
+
+        print(f"\nSlope: {line.slope()}")
+        print(f"Y-intercept: {line.y_intercept()}")
+        print(f"X-intercept: {line.x_intercept()}")
+
+    except ValueError as e:
+        print(f"Error: {e}")
+
+
