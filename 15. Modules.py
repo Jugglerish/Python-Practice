@@ -59,3 +59,11 @@ rr = calcr.gtr()
 print(f"Trigonometric Ratios for {ad} degrees: {rd}")
 print(f"Trigonometric Ratios for {ar} radians: {rr}")
 
+# 4. Write a Python program to change the current working directory to the downloads folder and change the mode of the directory.
+import os
+
+downloads_path = "/path/to/your/downloads/folder"
+
+try: os.chdir(downloads_path); os.chmod(downloads_path, 0o755); print(f"Changed directory to: {os.getcwd()} and mode to: {oct(0o755)}")
+except (FileNotFoundError, PermissionError) as e: print(f"An error occurred: {e}")
+
