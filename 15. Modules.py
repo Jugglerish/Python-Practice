@@ -112,3 +112,15 @@ def calc_lcm(x, y):
 
 def calc_hcf(x, y):
     return gcd(x, y)
+# main_script.py
+
+from mypackage import lcm_hcf as lh
+
+nums = [12, 18, 24]
+
+res_lcm = lh.calc_lcm(*nums)
+res_hcf = lh.calc_hcf(*nums)
+
+print(f"LCM of {', '.join(map(str, nums))} is: {res_lcm}")
+print(f"HCF of {', '.join(map(str, nums))} is: {res_hcf}")
+
