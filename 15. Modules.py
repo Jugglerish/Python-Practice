@@ -101,3 +101,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# 7. Construct a package that finds lcm and hef of the given numbers through two different functions. Use the created package in the interpreter using importlib.
+# lcm_hcf.py
+
+from math import gcd
+
+def calc_lcm(x, y):
+    return abs(x * y) // gcd(x, y) if x and y else 0
+
+def calc_hcf(x, y):
+    return gcd(x, y)
