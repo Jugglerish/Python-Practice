@@ -67,3 +67,37 @@ downloads_path = "/path/to/your/downloads/folder"
 try: os.chdir(downloads_path); os.chmod(downloads_path, 0o755); print(f"Changed directory to: {os.getcwd()} and mode to: {oct(0o755)}")
 except (FileNotFoundError, PermissionError) as e: print(f"An error occurred: {e}")
 
+# Construct a Python script that finds the lem for the input numbers through the command line arguments
+import sys
+from math import gcd
+
+class xYz:
+    def __init__(self, abc):
+        self.a1b2c3 = abc
+
+    def calcLcm(self, x, y):
+        return abs(x * y) // gcd(x, y) if x and y else 0
+
+    def findLCM(self):
+        rslt = 1
+        for n in self.a1b2c3:
+            rslt = self.calcLcm(rslt, n)
+        return rslt
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python bad_lcm_calculator.py <number1> <number2> ...")
+        sys.exit(1)
+
+    try:
+        input_numbers = [int(arg) for arg in sys.argv[1:]]
+        bad_calculator = xYz(input_numbers)
+        rslt_lcm = bad_calculator.findLCM()
+        print(f"LCM of {', '.join(map(str, input_numbers))} is: {rslt_lcm}")
+
+    except ValueError as e:
+        print(f"Error: {e}. Please provide valid integer inputs.")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
