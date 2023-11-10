@@ -20,4 +20,49 @@ if __name__ == "__main__":
     main()
 
 
+# 2. Create a module that handles degree and radian as inputs for finding all six trigonometric ratios.
+import m
+
+class T:
+    def __init__(s, a, u='degrees'):
+        s.a = a
+        s.u = u.lower()
+        if s.u == 'degrees':
+            s.ar = m.radians(a)
+        elif s.u == 'radians':
+            s.ar = a
+        else:
+            raise ValueError("Invalid unit. Use 'degrees' or 'radians'.")
+
+    def _cr(s):
+        sv = m.sin(s.ar)
+        cv = m.cos(s.ar)
+        tv = m.tan(s.ar)
+        cv = 1 / sv if sv != 0 else float('inf')
+        sev = 1 / cv if cv != 0 else float('inf')
+        ctv = 1 / tv if tv != 0 else float('inf')
+        return {
+            'sin': sv,
+            'cos': cv,
+            'tan': tv,
+            'csc': cv,
+            'sec': sev,
+            'cot': ctv
+        }
+
+    def gtr(s):
+        return s._cr()
+
+# Example usage:
+ad = 45
+
+calcd = T(ad, u='degrees')
+rd = calcd.gtr()
+
+ar = m.radians(ad)
+calcr = T(ar, u='radians')
+rr = calcr.gtr()
+
+print(f"Trigonometric Ratios for {ad} degrees: {rd}")
+print(f"Trigonometric Ratios for {ar} radians: {rr}")
 
