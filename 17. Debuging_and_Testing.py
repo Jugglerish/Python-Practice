@@ -141,3 +141,25 @@ class T(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+# 8. Write test cases for finding the perfect number
+def xyz(n):
+    s = 0
+    for i in range(1, n):
+        if n % i == 0:
+            s += i
+    return s == n
+
+def test_xyz():
+    assert xyz(6) == True
+    assert xyz(28) == True
+    assert xyz(12) == False
+    assert xyz(496) == True
+    assert xyz(10) == False
+    assert xyz(8128) == True
+    assert xyz(15) == False
+    assert xyz(33550336) == True
+    assert xyz(20) == False
+    assert xyz(28) == True
+
+test_xyz()
+
