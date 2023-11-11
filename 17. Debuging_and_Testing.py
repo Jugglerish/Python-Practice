@@ -52,3 +52,23 @@ bt = time.time(); bs(arr, v); bst = time.time() - bt
 print(f"L Search Time: {lst} sec"); print(f"B Search Time: {bst} sec")
 print("Linear is better." if lst < bst else "Binary is better.")
 
+# 4. Apply a profiler for a Python program that finds a perfect number.
+import cProfile
+
+def perf_num(limit):
+    perf_nums = [num for num in range(1, limit + 1) if sum(d for d in range(1, num) if num % d == 0) == num]
+    return perf_nums
+
+if __name__ == "__main__":
+    lim = 10000
+
+    profiler = cProfile.Profile()
+    profiler.enable()
+
+    result = perf_num(lim)
+
+    profiler.disable()
+    profiler.print_stats(sort='cumulative')
+    print(f"Perfect numbers up to {lim}: {result}")
+
+
