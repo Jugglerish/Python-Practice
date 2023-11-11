@@ -37,4 +37,13 @@ try:
 except IndexError:
     print("IndexError: Out of range")
 
+# 4. Create a Python Program which has a class Biological Family and tries to access attribute using try and exception which handles Attribute Error
+
+
+# 5. Given:
+#citizenship_details = {'city': 'Chennai', 'age': 22,
+#'country': 'India'
+#'nationality': 'Indian'}
+#user_input = input('What field of data you need on citizenship?').
+#Construct a Python script that accepts user input and returns results related to citizenship. Use a missing data field ("place of study and degree") to trigger a KeyError in Python and display the resulting error.
 
