@@ -38,6 +38,21 @@ except IndexError:
     print("IndexError: Out of range")
 
 # 4. Create a Python Program which has a class Biological Family and tries to access attribute using try and exception which handles Attribute Error
+class BiologicalFamily:
+    def __init__(self, name, members):
+        self.name = name
+        self.members = members
+
+# Creating an instance of BiologicalFamily
+my_family = BiologicalFamily("Smith", ["John", "Jane", "Bob"])
+
+try:
+    family_location = my_family.location
+except AttributeError:
+    print("AttributeError: 'BiologicalFamily' object has no attribute 'location'")
+else:
+    print(f"The family location is: {family_location}")
+
 
 
 # 5. Given:
