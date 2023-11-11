@@ -191,3 +191,18 @@ class TestPerfectNumber(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+
+
+# 10. Use the pytest to verify whether a number is a prime number or not.
+import pytest
+
+p=lambda n:all(n%i!=0 for i in range(2,n))if n>1else False
+
+def t1():assert p(2)
+def t2():assert not p(4)
+def t3():assert p(7)
+def t4():assert not p(9)
+
+if __name__=="__main__":pytest.main()
+
+
