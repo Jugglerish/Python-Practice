@@ -62,4 +62,14 @@ else:
 #user_input = input('What field of data you need on citizenship?').
 #Construct a Python script that accepts user input and returns results related to citizenship. Use a missing data field ("place of study and degree") to trigger a KeyError in Python and display the resulting error.
 
+citizenship_details = {'city': 'Chennai', 'age': 22, 'country': 'India', 'nationality': 'Indian'}
+user_input = input('What field of data you need on citizenship? ')
+
+try:
+    result = citizenship_details[user_input]
+    print(f'{user_input}: {result}')
+except KeyError as e:
+    print(f'Error: {e} field not found in citizenship details.')
+
+
 
