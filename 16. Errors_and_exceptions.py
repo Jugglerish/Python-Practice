@@ -71,5 +71,15 @@ try:
 except KeyError as e:
     print(f'Error: {e} field not found in citizenship details.')
 
+# 6. Clearly show using the KeyError Exception class in Python how to deal with the KeyError that was thrown by the preceding code.
+my_dict = {'key1': 'value1', 'key2': 'value2'}
+
+try:
+    value = my_dict['key3']
+except KeyError as e:
+    print(f"Error: {e}")
+
+print("Code continues executing...")
+
 
 
