@@ -26,3 +26,15 @@ except ValueError as e:
 except ZeroDivisionError as e:
     print(f"Error: {e}")
 
+# 3. Write a python program that access the elements of a list using range function and loop which handles index error
+lst = [1, 2, 3, 4, 5]
+
+try:
+    for i in range(len(lst)):
+        elem = lst[i]
+        print(f"Element at index {i}: {elem}")
+
+except IndexError:
+    print("IndexError: Out of range")
+
+
