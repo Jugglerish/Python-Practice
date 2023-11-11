@@ -19,6 +19,7 @@ pns = pn(n)
 print(f"pRiMe numbeRS up to {n}: {pns}")
 
 
+
 # 2. Write a function for finding a perfect number and use Pdb to debug it.
 import pdb
 
@@ -37,6 +38,8 @@ if __name__ == "__main__":
         print(f"The number {input_num} is a perfect number.")
     else:
         print(f"The number {input_num} is not a perfect number.")
+
+
 
 # 3. Write a program for finding linear and binary searches. Determine the profiling of both functions and justify the better search method based on profiling results.
 import time
