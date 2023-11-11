@@ -37,3 +37,15 @@ if __name__ == "__main__":
         print(f"The number {input_num} is a perfect number.")
     else:
         print(f"The number {input_num} is not a perfect number.")
+
+# 3. Write a program for finding linear and binary searches. Determine the profiling of both functions and justify the better search method based on profiling results.
+import time
+def ls(a, x): return any(i == x for i in a)
+def bs(a, x): l, h = 0, len(a) - 1; while l <= h: m = (l + h) // 2; if a[m] == x: return True; elif a[m] < x: l = m + 1; else: h = m - 1; return False
+sz, v = 10000, 9999
+arr = list(range(sz))
+lt = time.time(); ls(arr, v); lst = time.time() - lt
+bt = time.time(); bs(arr, v); bst = time.time() - bt
+print(f"L Search Time: {lst} sec"); print(f"B Search Time: {bst} sec")
+print("Linear is better." if lst < bst else "Binary is better.")
+
