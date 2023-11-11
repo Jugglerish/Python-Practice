@@ -126,3 +126,17 @@ try:
 
 except (TypeError, NameError) as e:
     print(f"An exception occurred: {type(e).__name__} - {e}")
+
+# 10. Write a Python script for handling FileNotFoundError Exceptions.
+#Given:
+# x= open("sample.txt")
+try:
+    a = open("sample.txt", 'r')
+
+    # Rest of your code goes here
+
+except FileNotFoundError as e:
+    print(f"File not found: {e}")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
