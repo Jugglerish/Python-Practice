@@ -109,3 +109,35 @@ if __name__ == '__main__':
     unittest.main()
 
 
+
+# 7. Write test cases for finding a prime number
+import unittest
+
+def p(n):
+    return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+
+class T(unittest.TestCase):
+    def tn(self):
+        self.assertFalse(p(-5))
+
+    def tz(self):
+        self.assertFalse(p(0))
+
+    def to(self):
+        self.assertFalse(p(1))
+
+    def tsp(self):
+        self.assertTrue(p(2))
+
+    def tpp(self):
+        self.assertTrue(p(17))
+
+    def tpnp(self):
+        self.assertFalse(p(15))
+
+    def tlp(self):
+        self.assertTrue(p(97))
+
+if __name__ == '__main__':
+    unittest.main()
+
