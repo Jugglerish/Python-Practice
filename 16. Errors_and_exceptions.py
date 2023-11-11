@@ -113,3 +113,16 @@ try:
     example_function(val)
 except ValueError:
     print("Invalid input. Please enter a valid number.")
+
+# 9. Write a Python script for handling Multiple Exceptions in one single block
+#Given:
+#city= 'Delhi'
+# city+= 1
+# x=x+'295'
+try:
+    a = 'Delhi'
+    a += 1
+    b = c + '295'
+
+except (TypeError, NameError) as e:
+    print(f"An exception occurred: {type(e).__name__} - {e}")
