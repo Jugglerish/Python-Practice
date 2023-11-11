@@ -8,3 +8,21 @@ while 1:
 
 print("You entered:", n)
 
+# 2. Develop a program to demonstrate raising exceptions for a ZeroDivisionError.
+def divide(x, y):
+    if y == 0:
+        raise ZeroDivisionError("Cannot divide by zero")
+    return x / y
+
+try:
+    num = float(input("Enter numerator: "))
+    denom = float(input("Enter denominator: "))
+    
+    result = divide(num, denom)
+    print("Result:", result)
+
+except ValueError as e:
+    print(f"Invalid input: {e}")
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+
