@@ -82,4 +82,19 @@ except KeyError as e:
 print("Code continues executing...")
 
 
+# 7. Write a Python script to handle a [i] ArithmeticError with a try-except statement for (67+89j)/0
+# [ii] ZeroDivionError with a try-except -else statement for (491*362)/0
+try:
+    x = (67 + 89j) / 0
+except ArithmeticError as e:
+    print(f"Error1: {e}")
+else:
+    print(f"Result1: {x}")
+
+try:
+    y = (491 * 362) / 0
+except ZeroDivisionError as e:
+    print(f"Error2: {e}")
+else:
+    print(f"Result2: {y}")
 
