@@ -163,3 +163,31 @@ def test_xyz():
 
 test_xyz()
 
+
+# 9. Use unittest for checking whether a number is a perfect number or not
+import unittest
+
+def is_perfect_number(n):
+    s = 0
+    for i in range(1, n):
+        if n % i == 0:
+            s += i
+    return s == n
+
+class TestPerfectNumber(unittest.TestCase):
+
+    def test_perfect_number(self):
+        self.assertTrue(is_perfect_number(6))
+        self.assertTrue(is_perfect_number(28))
+        self.assertFalse(is_perfect_number(12))
+        self.assertTrue(is_perfect_number(496))
+        self.assertFalse(is_perfect_number(10))
+        self.assertTrue(is_perfect_number(8128))
+        self.assertFalse(is_perfect_number(15))
+        self.assertTrue(is_perfect_number(33550336))
+        self.assertFalse(is_perfect_number(20))
+        self.assertTrue(is_perfect_number(28))
+
+if __name__ == '__main__':
+    unittest.main()
+
