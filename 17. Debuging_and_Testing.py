@@ -86,4 +86,26 @@ if __name__ == "__main__":
     doctest.testmod()
 
 
+#6. Use unittest for testing a multiplication program
+import unittest
+
+def mul(a, b):
+    return a * b
+
+class T(unittest.TestCase):
+    def t_p(self):
+        self.assertEqual(mul(2, 3), 6)
+
+    def t_n(self):
+        self.assertEqual(mul(-4, 2), -8)
+
+    def t_z(self):
+        self.assertEqual(mul(0, 5), 0)
+
+    def t_zz(self):
+        self.assertEqual(mul(0, 0), 0)
+
+if __name__ == '__main__':
+    unittest.main()
+
 
