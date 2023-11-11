@@ -151,5 +151,29 @@ try:
 except IndexError:
     print(f"Oops! There is no spice at position {index_to_access}. The 'spices' list does not have that many elements.")
 
+# 12. Create a Python script that handles multiple exceptions with separate blocks of code.
+try:
+    num1 = int(input("Enter numerator: "))
+    num2 = int(input("Enter denominator: "))
+    
+    result = num1 / num2
+    result_as_int = int(result)
+
+    print(f"Result: {result}")
+
+except ValueError:
+    print("Invalid input. Enter valid numerical values.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero. Enter a non-zero denominator.")
+
+except Exception as e:
+    print(f"Unexpected error: {e}")
+
+else:
+    print("Code executed successfully.")
+
+finally:
+    print("Always executes, whether an exception occurred or not.")
 
 
