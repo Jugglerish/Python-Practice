@@ -1,3 +1,4 @@
+
 # . Write a function for finding a prime number. Introduce a known bug. Use Pdb to debug it.
 def pn(n):
     ps = []
@@ -52,6 +53,8 @@ bt = time.time(); bs(arr, v); bst = time.time() - bt
 print(f"L Search Time: {lst} sec"); print(f"B Search Time: {bst} sec")
 print("Linear is better." if lst < bst else "Binary is better.")
 
+
+
 # 4. Apply a profiler for a Python program that finds a perfect number.
 import cProfile
 
@@ -70,5 +73,17 @@ if __name__ == "__main__":
     profiler.disable()
     profiler.print_stats(sort='cumulative')
     print(f"Perfect numbers up to {lim}: {result}")
+
+
+# 5. Write a function for multiplication and division. Apply to a doctest to verify it.
+def mul_div(a, b):
+    mul = a * b
+    div = a / b if b != 0 else float('inf')
+    return mul, div
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
 
 
