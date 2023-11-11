@@ -98,3 +98,18 @@ except ZeroDivisionError as e:
 else:
     print(f"Result2: {y}")
 
+# 8. Include a finally block and rewrite the python script (example 16.11) to handle a single value error with a try-except statement
+def example_function(val):
+    try:
+        res = some_function(val)
+        print("Result:", res)
+    except ValueError as e:
+        print("Error:", e)
+    finally:
+        print("Finally block executed")
+
+try:
+    val = int(input("Enter a number: "))
+    example_function(val)
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
