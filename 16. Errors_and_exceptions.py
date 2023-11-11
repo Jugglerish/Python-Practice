@@ -177,3 +177,20 @@ finally:
     print("Always executes, whether an exception occurred or not.")
 
 
+# Write a Python user-defined exceptions to display the following output?
+#Hints:
+# Elicit input from user using the pharse, "Enter the consensus mechanism used in ethereum:" Raise an exception using - "raise(BlockchainError(Blockchain_consenus))" Except block- "except BlockchainError as error:
+class ConsensusError(Exception):
+    pass
+
+def check_consensus_mechanism(input_mechanism):
+    if input_mechanism.lower() != 'proof of stake':
+        raise ConsensusError("Invalid mechanism! Ethereum uses 'Proof of Stake'.")
+    else:
+        print("Valid choice! Ethereum uses Proof of Stake.")
+
+try:
+    user_input = input("Enter the consensus mechanism in Ethereum: ")
+    check_consensus_mechanism(user_input)
+except ConsensusError as error:
+    print(f"Error: {error}")
