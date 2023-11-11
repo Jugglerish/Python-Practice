@@ -38,21 +38,21 @@ except IndexError:
     print("IndexError: Out of range")
 
 # 4. Create a Python Program which has a class Biological Family and tries to access attribute using try and exception which handles Attribute Error
-class BiologicalFamily:
-    def __init__(self, name, members):
-        self.name = name
-        self.members = members
+class BioFamily:
+    def __init__(self, f, m, c):
+        self.f = f
+        self.m = m
+        self.c = c
 
-# Creating an instance of BiologicalFamily
-my_family = BiologicalFamily("Smith", ["John", "Jane", "Bob"])
+my_family = BioFamily("John", "Jane", ["Alice", "Bob"])
 
 try:
-    family_location = my_family.location
-except AttributeError:
-    print("AttributeError: 'BiologicalFamily' object has no attribute 'location'")
+    family_pets = my_family.pets
+except AttributeError as e:
+    print(f"AttributeError: {e}")
+    print("The attribute 'pets' does not exist in the BioFamily class.")
 else:
-    print(f"The family location is: {family_location}")
-
+    print("Family pets:", family_pets)
 
 
 # 5. Given:
@@ -61,4 +61,5 @@ else:
 #'nationality': 'Indian'}
 #user_input = input('What field of data you need on citizenship?').
 #Construct a Python script that accepts user input and returns results related to citizenship. Use a missing data field ("place of study and degree") to trigger a KeyError in Python and display the resulting error.
+
 
