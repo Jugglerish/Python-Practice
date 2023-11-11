@@ -140,3 +140,16 @@ except FileNotFoundError as e:
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
+# 11. Show how an Index Error can be easily resolved with a brief Python script.
+# spices ['Saffron','Turmeric','Cumin',' Nutmeg','Cardamom'] print(spices[8])
+spices = ['Saffron', 'Turmeric', 'Cumin', 'Nutmeg', 'Cardamom']
+
+try:
+    index_to_access = 8
+    spice_at_index = spices[index_to_access]
+    print(f"The spice at position {index_to_access} is: {spice_at_index}")
+except IndexError:
+    print(f"Oops! There is no spice at position {index_to_access}. The 'spices' list does not have that many elements.")
+
+
+
