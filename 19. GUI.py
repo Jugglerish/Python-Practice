@@ -86,17 +86,16 @@ root.mainloop()
 # 4. Create a simple GUI containing a text area enabled with horizontal scrolling.
 import tkinter as tk
 
-root = tk.Tk()
-root.title("Horizontal Scrolling Text Area")
+r = tk.Tk()
+r.title("Horizontal Scroll Text")
 
-scrollbar = tk.Scrollbar(root, orient="horizontal")
-scrollbar.pack(side="bottom", fill="x")
+s = tk.Scrollbar(r, orient="horizontal")
+s.pack(side="bottom", fill="x")
 
-text_area = tk.Text(root, wrap="none", xscrollcommand=scrollbar.set)
-text_area.pack()
+t = tk.Text(r, wrap="none", xscrollcommand=s.set)
+t.pack()
 
-scrollbar.config(command=text_area.xview)
+s.config(command=t.xview)
 
-root.mainloop()
-
+r.mainloop()
 
