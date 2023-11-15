@@ -67,3 +67,19 @@ result.grid(row=3, columnspan=2)
 
 root.mainloop()
 
+
+# 3. Create a simple GUI with four buttons with different foreground colours and background colours.
+import tkinter as tk
+
+def dummy():
+    pass
+
+root = tk.Tk()
+root.title("Buttons")
+
+for text, fg, bg in [("Button 1", "white", "blue"), ("Button 2", "black", "yellow"),
+                      ("Button 3", "white", "green"), ("Button 4", "black", "red")]:
+    tk.Button(root, text=text, fg=fg, bg=bg, command=dummy).pack()
+
+root.mainloop()
+
