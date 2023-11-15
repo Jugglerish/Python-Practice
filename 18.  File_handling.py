@@ -67,3 +67,14 @@ with open(f1, "r") as a, open(f2, "r") as b:
 
 for line in merged_lines:
     print(line)
+
+
+#v6. Create a Python script to count the number of words in a file.(specimen2.txt file)
+f = "specimen2.txt"
+
+with open(f, "r") as file:
+    content = file.read()
+    count = len(content.split())
+
+print(f"Word count in '{f}': {count}")
+
