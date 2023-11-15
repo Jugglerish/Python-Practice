@@ -24,3 +24,11 @@ with open("sample.txt", "w") as file:
     file.write(content)
 with open("sample.txt", "r") as file:
     print(file.read())
+
+
+
+# 2. Create a Python program that generates a file containing a list of all English alphabet letters arranged in a specific order.
+order = 'ZYXWVUTSRQPONMLKJIHGFEDCBA'
+
+with open('alphabet.txt', 'w') as file:
+    file.write(order)
