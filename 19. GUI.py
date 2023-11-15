@@ -83,3 +83,20 @@ for text, fg, bg in [("Button 1", "white", "blue"), ("Button 2", "black", "yello
 
 root.mainloop()
 
+# 4. Create a simple GUI containing a text area enabled with horizontal scrolling.
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Horizontal Scrolling Text Area")
+
+scrollbar = tk.Scrollbar(root, orient="horizontal")
+scrollbar.pack(side="bottom", fill="x")
+
+text_area = tk.Text(root, wrap="none", xscrollcommand=scrollbar.set)
+text_area.pack()
+
+scrollbar.config(command=text_area.xview)
+
+root.mainloop()
+
+
