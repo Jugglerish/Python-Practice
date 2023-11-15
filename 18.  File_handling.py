@@ -11,6 +11,11 @@
 # Python is useful in storing and retrieving data into a file including database.
 # The data analysis is made easier in Python which make add fuels to its popularity.
 # Python adopts to any upcoming trend in IT industry.
+
+
+
+
+# Create a text file and then display it using a Python script
 content = """Python is useful in storing and retrieving data into a file including database.
 The data analysis is made easier in Python which make add fuels to its popularity.
 Python adopts to any upcoming trend in IT industry."""
