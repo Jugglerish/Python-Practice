@@ -32,3 +32,11 @@ order = 'ZYXWVUTSRQPONMLKJIHGFEDCBA'
 
 with open('alphabet.txt', 'w') as file:
     file.write(order)
+
+# 3. Create a Python program that reads the named specimen2.txt file line-by-line and count the number of lines.
+file_name = "specimen2.txt"
+
+with open(file_name, "r") as file:
+    count = sum(1 for line in file)
+
+print(f"The total lines in the file '{file_name}' are: {count}")
