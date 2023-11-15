@@ -99,3 +99,38 @@ s.config(command=t.xview)
 
 r.mainloop()
 
+
+# 5. Create a simple GUI to receive value of height and radius of a cylinder and calculate its volume.
+import tkinter as tk
+import math
+
+def calculate():
+    try:
+        h = float(e_h.get())
+        r = float(e_r.get())
+        result.config(text=f"Volume: {math.pi * r ** 2 * h:.2f}")
+    except ValueError:
+        result.config(text="Enter valid numbers")
+
+root = tk.Tk()
+root.title("Cylinder Volume")
+
+l_h = tk.Label(root, text="Height:")
+l_h.grid(row=0, column=0)
+e_h = tk.Entry(root)
+e_h.grid(row=0, column=1)
+
+l_r = tk.Label(root, text="Radius:")
+l_r.grid(row=1, column=0)
+e_r = tk.Entry(root)
+e_r.grid(row=1, column=1)
+
+b_calc = tk.Button(root, text="Calculate", command=calculate)
+b_calc.grid(row=2, columnspan=2)
+
+result = tk.Label(root, text="Volume: ")
+result.grid(row=3, columnspan=2)
+
+root.mainloop()
+
+
