@@ -89,3 +89,15 @@ with open(f, "r") as file:
 
 print(f"Longest word(s) in '{f}': {longest} with length {length}")
 
+
+# 8. Write a program that reads the first n lines of a given file.
+f = "sample_file.txt"
+n = 5
+
+with open(f, "r") as file:
+    lines = [next(file) for _ in range(n)]
+
+print(f"First {n} lines of '{f}':")
+for line in lines:
+    print(line.strip())
+
