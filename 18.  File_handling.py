@@ -52,3 +52,18 @@ with open(file, "r") as f:
 
 print("Random line:", rand_line)
 
+
+
+# 5. Create a Python program to merge each line from the first file(specimenl.txt file) with the equivalent line from the second file (specimen3. txt file).
+f1 = "specimen1.txt"
+f2 = "specimen3.txt"
+
+with open(f1, "r") as a, open(f2, "r") as b:
+    lines_a = a.readlines()
+    lines_b = b.readlines()
+
+    min_lines = min(len(lines_a), len(lines_b))
+    md_lines = [f"{lines_a[i].strip()} {lines_b[i]}" for i in range(min_lines)]
+
+for line in merged_lines:
+    print(line)
