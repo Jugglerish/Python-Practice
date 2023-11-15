@@ -78,3 +78,14 @@ with open(f, "r") as file:
 
 print(f"Word count in '{f}': {count}")
 
+# 7. Find the longest words in the specimen3.txt file by writing a Python program.
+f = "specimen3.txt"
+
+with open(f, "r") as file:
+    words = file.read().split()
+
+    length = max(len(word) for word in words)
+    longest = [word for word in words if len(word) == length]
+
+print(f"Longest word(s) in '{f}': {longest} with length {length}")
+
