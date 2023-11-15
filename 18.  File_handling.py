@@ -20,8 +20,7 @@ content = """Python is useful in storing and retrieving data into a file includi
 The data analysis is made easier in Python which make add fuels to its popularity.
 Python adopts to any upcoming trend in IT industry."""
 
-with open("sample_file.txt", "w") as file:
+with open("sample.txt", "w") as file:
     file.write(content)
-
-with open("specimen3.txt", "r") as file:
+with open("sample.txt", "r") as file:
     print(file.read())
