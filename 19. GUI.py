@@ -170,3 +170,29 @@ e_fn, e_ln, e_add, e_email, e_cn, e_aadhaar = entries
 
 r.mainloop()
 
+# 7. Create a GUI to Say whether the given number is a prime number or not. Note: Use Text box and use label to display the result.
+import tkinter as tk
+
+def check():
+    try:
+        num = int(e.get())
+        is_prime = num > 1 and all(num % i != 0 for i in range(2, int(num ** 0.5) + 1))
+        res.config(text=f"{num} is {'a prime number' if is_prime else 'not a prime number'}")
+    except ValueError:
+        res.config(text="Please enter a valid number")
+
+r = tk.Tk()
+r.title("Prime Checker")
+
+tk.Label(r, text="Enter a Number:").grid(row=0, column=0)
+e = tk.Entry(r)
+e.grid(row=0, column=1)
+
+tk.Button(r, text="Check", command=check).grid(row=1, columnspan=2)
+
+res = tk.Label(r, text="")
+res.grid(row=2, columnspan=2)
+
+r.mainloop()
+
+
