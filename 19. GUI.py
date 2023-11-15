@@ -195,4 +195,24 @@ res.grid(row=2, columnspan=2)
 
 r.mainloop()
 
+# 8. Write a Python program to receive a text from the user and print the reversed text in the form label after clicking the reverse button in the GUI. For example, if "xyz" is given as input and "zyx" is displayed as the output.
+import tkinter as tk
+
+def reverse():
+    res.config(text=e.get()[::-1])
+
+r = tk.Tk()
+r.title("Text Reversal")
+
+tk.Label(r, text="Enter Text:").grid(row=0, column=0)
+e = tk.Entry(r)
+e.grid(row=0, column=1)
+
+tk.Button(r, text="Reverse", command=reverse).grid(row=1, columnspan=2)
+
+res = tk.Label(r, text="")
+res.grid(row=2, columnspan=2)
+
+r.mainloop()
+
 
