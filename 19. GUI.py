@@ -36,3 +36,34 @@ display_button.grid(row=4, columnspan=2)
 
 root.mainloop()
 
+
+# 2. Create a simple GUI comprising two text boxes to receive input for the value of n and r and display the value of "C, in the Window itself.
+import tkinter as tk
+import math
+
+def calc():
+    n = int(entry_n.get())
+    r = int(entry_r.get())
+    result.config(text=f"Value of C: {math.comb(n, r)}")
+
+root = tk.Tk()
+root.title("Combination Calculator")
+
+label_n = tk.Label(root, text="n:")
+label_n.grid(row=0, column=0)
+entry_n = tk.Entry(root)
+entry_n.grid(row=0, column=1)
+
+label_r = tk.Label(root, text="r:")
+label_r.grid(row=1, column=0)
+entry_r = tk.Entry(root)
+entry_r.grid(row=1, column=1)
+
+button_calc = tk.Button(root, text="Calculate", command=calc)
+button_calc.grid(row=2, columnspan=2)
+
+result = tk.Label(root, text="Value of C: ")
+result.grid(row=3, columnspan=2)
+
+root.mainloop()
+
