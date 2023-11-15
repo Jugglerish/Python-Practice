@@ -40,3 +40,15 @@ with open(file_name, "r") as file:
     count = sum(1 for line in file)
 
 print(f"The total lines in the file '{file_name}' are: {count}")
+
+# 4. Create a Python program that reads a random line from a file (specimen2.txt file)and outputs it.
+import random
+
+file = "specimen2.txt"
+
+with open(file, "r") as f:
+    lines = f.readlines()
+    rand_line = random.choice(lines)
+
+print("Random line:", rand_line)
+
