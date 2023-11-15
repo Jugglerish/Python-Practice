@@ -134,3 +134,39 @@ result.grid(row=3, columnspan=2)
 root.mainloop()
 
 
+# 6. Create a user registration form and store the details as an object of User Class. The attributes of the User Class are first_name, last_name, address, email, contact_number and aadhaar_ number.
+import tkinter as tk
+
+class User:
+    def __init__(self, first, last, address, email, contact, aadhaar):
+        self.first = first
+        self.last = last
+        self.address = address
+        self.email = email
+        self.contact = contact
+        self.aadhaar = aadhaar
+
+def register():
+    user = User(e_fn.get(), e_ln.get(), e_add.get(), e_email.get(), e_cn.get(), e_aadhaar.get())
+    print("User Registered:")
+    for attr, value in user.__dict__.items():
+        print(f"{attr.capitalize()}: {value}")
+
+r = tk.Tk()
+r.title("User Registration")
+
+labels = ["First Name:", "Last Name:", "Address:", "Email:", "Contact Number:", "Aadhaar Number:"]
+entries = []
+
+for i, label_text in enumerate(labels):
+    tk.Label(r, text=label_text).grid(row=i, column=0)
+    entry = tk.Entry(r)
+    entry.grid(row=i, column=1)
+    entries.append(entry)
+
+tk.Button(r, text="Register", command=register).grid(row=len(labels), columnspan=2)
+
+e_fn, e_ln, e_add, e_email, e_cn, e_aadhaar = entries
+
+r.mainloop()
+
