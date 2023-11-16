@@ -47,3 +47,31 @@ q3 = np.percentile(xyz, 75)
 max_val = np.max(xyz)
 
 print(min_val, q1, med, q3, max_val)
+
+
+
+
+# 5. Find the matrix multiplication of these two matrices using arrays and NumPy.
+A. [[1, 0, 0], [0, 1, 0], [0, 0, 1]] * z and
+[[4, 3, 2], [1, 1, 7], [3, 4, 5]]
+B. and
+[[1, 3, 6], [1, 1, 9], [3, 2, 5]] ^ i
+[[6, 3, 6], [3, 2, 9], [3, 2, 5]]
+import numpy as np
+
+A = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+z = np.array([[4, 3, 2], [1, 1, 7], [3, 4, 5]])
+
+rA_np = np.dot(A, z)
+
+print(rA_np)
+
+
+i = np.array([[1, 3, 6], [1, 1, 9], [3, 2, 5]])
+ei = np.array([[6, 3, 6], [3, 2, 9], [3, 2, 5]])
+
+ri_np = np.dot(i, ei)
+
+print(ri_np)
+
+
