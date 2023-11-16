@@ -20,3 +20,14 @@ oddele = xyz[xyz % 2!= 0]
 eveele = xyz[xyz %  2 == 0]
 print("Odd elements:", oddele)
 print("Even elements:", eveele)
+
+
+#3. Find the duplicate elements in an array.
+import numpy as np
+
+xyz = np.array([1, 2, 3, 2, 4, 5, 3, 6, 1])
+
+unique, counts = np.unique(xyz, return_counts=True)
+dups = unique[counts > 1]
+
+print(dups)
