@@ -116,3 +116,25 @@ df = pd.DataFrame(dd)
 
 print(df)
 
+
+# 8. Write a Python program using Q7 and find descriptive statistics.
+import pandas as pd
+
+dt = [
+    (1, 10),
+    (2, 15),
+    (3, 40),
+    (4, 60),
+    (5, 80)
+]
+
+col = ['Student Id', 'Marks']
+
+dd = {k: v for k, v in zip(col, zip(*dt))}
+
+df = pd.DataFrame(dd)
+
+stats = df.describe()
+
+print(stats)
+
