@@ -177,3 +177,5 @@ plt.pie(df['Marks'], labels=df['Student Id'], autopct='%1.1f%%', startangle=90)
 plt.title('Pie Chart: Distribution of Marks')
 plt.show()
 
+#10. Use Scikit-learn and write a Python program to solve the regression problems given in the problem section.
+
