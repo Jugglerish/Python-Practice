@@ -31,3 +31,19 @@ unique, counts = np.unique(xyz, return_counts=True)
 dups = unique[counts > 1]
 
 print(dups)
+
+
+# 4. Using NumPy, find the five-point summary of the following list of numbers.
+#A =[10 40 60 100 120 140]
+
+import numpy as np
+
+xyz = np.array([10, 40, 60, 100, 120, 140])
+
+min_val = np.min(xyz)
+q1 = np.percentile(xyz, 25)
+med = np.median(xyz)
+q3 = np.percentile(xyz, 75)
+max_val = np.max(xyz)
+
+print(min_val, q1, med, q3, max_val)
