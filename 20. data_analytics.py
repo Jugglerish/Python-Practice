@@ -75,3 +75,15 @@ ri_np = np.dot(i, ei)
 print(ri_np)
 
 
+
+
+# 6. Find the determinant of the following matrices using NumPy.
+A. [[6, 3, 6], [3, 2, 9], [3, 2, 5]]
+B. [[8, 6], [7, 2]]
+
+import numpy as np
+
+A = np.array([[6, 3, 6], [3, 2, 9], [3, 2, 5]])
+dA = np.linalg.det(A)
+print(dA)
+
