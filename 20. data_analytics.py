@@ -138,3 +138,42 @@ stats = df.describe()
 
 print(stats)
 
+
+# 9. Draw the following charts for this data
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dt = [
+    (1, 10),
+    (2, 15),
+    (3, 40),
+    (4, 60),
+    (5, 80)
+]
+
+col = ['Student Id', 'Marks']
+
+dd = {k: v for k, v in zip(col, zip(*dt))}
+df = pd.DataFrame(dd)
+
+plt.figure(figsize=(8, 5))
+plt.plot(df['Student Id'], df['Marks'], marker='o', linestyle='-', color='b')
+plt.title('Line Plot: Student ID vs Marks')
+plt.xlabel('Student ID')
+plt.ylabel('Marks')
+plt.grid(True)
+plt.show()
+
+plt.figure(figsize=(8, 5))
+plt.bar(df['Student Id'], df['Marks'], color='g')
+plt.title('Bar Chart: Student ID vs Marks')
+plt.xlabel('Student ID')
+plt.ylabel('Marks')
+plt.grid(axis='y')
+plt.show()
+
+plt.figure(figsize=(8, 8))
+plt.pie(df['Marks'], labels=df['Student Id'], autopct='%1.1f%%', startangle=90)
+plt.title('Pie Chart: Distribution of Marks')
+plt.show()
+
