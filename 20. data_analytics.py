@@ -87,3 +87,32 @@ A = np.array([[6, 3, 6], [3, 2, 9], [3, 2, 5]])
 dA = np.linalg.det(A)
 print(dA)
 
+
+
+7. #Consider the following data frame.
+#Student Id                         Marks
+#1                                               10
+#2                                               15
+#3                                               40
+#4                                               60
+#5                                               80
+#Create a data frame using tuples and a dictionary.
+
+import pandas as pd
+
+dt = [
+    (1, 10),
+    (2, 15),
+    (3, 40),
+    (4, 60),
+    (5, 80)
+]
+
+col = ['Student Id', 'Marks']
+
+dd = {k: v for k, v in zip(col, zip(*dt))}
+
+df = pd.DataFrame(dd)
+
+print(df)
+
